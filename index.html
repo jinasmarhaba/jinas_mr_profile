@@ -384,6 +384,19 @@ img { max-width: 100%; }
   overflow-wrap: anywhere;
 }
 
+/* Company links inherit the existing profile card typography. */
+.info-value a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s, color .2s;
+}
+
+.info-value a:hover {
+  color: var(--olive);
+  border-bottom-color: var(--olive);
+}
+
 .profile-footnote {
   color: var(--muted);
   font-size: 11px;
@@ -869,15 +882,45 @@ footer strong {
         <article class="info-card"><div class="info-label">Religion</div><div class="info-value">Islam</div></article>
         <article class="info-card"><div class="info-label">Community</div><div class="info-value">Sunni Mappila</div></article>
         <article class="info-card"><div class="info-label">Madhab</div><div class="info-value">Shafi'i</div></article>
-        <article class="info-card"><div class="info-label">Profession</div><div class="info-value">Data Engineer</div></article>
+
+        <article class="info-card">
+          <div class="info-label">Profession</div>
+          <div class="info-value">Data Engineer</div>
+        </article>
+
+        <article class="info-card">
+          <div class="info-label">Current Company</div>
+          <div class="info-value">
+            <a href="https://www.deloitte.com/"
+               target="_blank"
+               rel="noopener noreferrer">Deloitte ↗</a>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <div class="info-label">Previous Company</div>
+          <div class="info-value">
+            <a href="https://www.accenture.com/"
+               target="_blank"
+               rel="noopener noreferrer">Accenture ↗</a>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <div class="info-label">Previous Role</div>
+          <div class="info-value">Software Engineer</div>
+        </article>
+
         <article class="info-card"><div class="info-label">Current Location</div><div class="info-value">Bengaluru</div></article>
         <article class="info-card"><div class="info-label">Native Place</div><div class="info-value">Kalladikode, Kerala</div></article>
         <article class="info-card"><div class="info-label">Place of Birth</div><div class="info-value">Mannarkkad, Kerala</div></article>
         <article class="info-card"><div class="info-label">Education</div><div class="info-value">B.Tech Computer Science</div></article>
+
         <article class="info-card">
           <div class="info-label">College</div>
           <div class="info-value">Ammini College of Engineering, Mankara, Palakkad</div>
         </article>
+
         <article class="info-card"><div class="info-label">University</div><div class="info-value">APJ Abdul Kalam Technological University</div></article>
         <article class="info-card"><div class="info-label">Graduation Year</div><div class="info-value">2021</div></article>
         <article class="info-card"><div class="info-label">CGPA</div><div class="info-value">7.89</div></article>
@@ -961,7 +1004,7 @@ footer strong {
             ambitions, respect each other's individuality, and share life's
             joys and responsibilities as a team.
           </p>
-          <div class="values"><span>Deen & Dunya</span><span>Trust</span><span>Mutual Respect</span><span>Growing Together</span></div>
+          <div class="values"><span>Deen &amp; Dunya</span><span>Trust</span><span>Mutual Respect</span><span>Growing Together</span></div>
         </article>
       </div>
     </div>
@@ -1085,7 +1128,7 @@ footer strong {
     }
   }, { passive: true });
 
-  const sections = document.querySelectorAll(".fade-up");
+  let sections = document.querySelectorAll(".fade-up");
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
