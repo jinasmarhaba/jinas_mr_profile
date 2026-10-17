@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -389,155 +390,6 @@ img { max-width: 100%; }
   margin-top: 22px;
 }
 
-/* CAREER SECTION — added without changing the existing theme */
-.career-section {
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
-}
-
-.career-inner {
-  max-width: 1240px;
-  margin: auto;
-  padding: 76px 34px;
-}
-
-.career-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.career-card {
-  background: var(--paper);
-  border: 1px solid rgba(50,48,37,.06);
-  border-radius: 6px;
-  padding: 27px;
-  min-width: 0;
-  transition: transform .22s, box-shadow .22s;
-}
-
-.career-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(50,48,37,.07);
-}
-
-.career-company {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-  margin-bottom: 25px;
-}
-
-.company-wordmark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  min-width: 105px;
-  min-height: 48px;
-  padding: 9px 12px;
-  border-radius: 4px;
-  background: #f2efe6;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: -.06em;
-  white-space: nowrap;
-}
-
-.deloitte-wordmark {
-  color: #202020;
-}
-
-.deloitte-wordmark .brand-dot {
-  color: #86bc25;
-  margin-left: 1px;
-}
-
-.accenture-wordmark {
-  color: #5d2b90;
-  font-size: 19px;
-}
-
-.accenture-wordmark .brand-arrow {
-  color: #a100ff;
-  margin-right: 3px;
-  font-size: 23px;
-}
-
-.career-company-text {
-  min-width: 0;
-}
-
-.career-company-text h3 {
-  font-family: var(--serif);
-  font-size: 23px;
-  line-height: 1.25;
-  font-weight: 400;
-  margin: 0 0 5px;
-  overflow-wrap: anywhere;
-}
-
-.career-company-text p {
-  font-size: 11px;
-  line-height: 1.6;
-  color: var(--muted);
-  margin: 0;
-}
-
-.career-role {
-  font-family: var(--serif);
-  font-size: 27px;
-  line-height: 1.3;
-  font-weight: 400;
-  margin: 0 0 12px;
-}
-
-.career-description {
-  color: #6b6b61;
-  font-size: 12px;
-  line-height: 1.9;
-  margin: 0 0 20px;
-}
-
-.career-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 19px;
-}
-
-.career-skills span {
-  background: #e9e5d9;
-  color: #525647;
-  padding: 8px 11px;
-  border-radius: 30px;
-  font-size: 10px;
-  line-height: 1.4;
-}
-
-.career-divider {
-  height: 1px;
-  background: var(--line);
-  margin: 20px 0;
-}
-
-.career-highlight {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  color: #67685f;
-  font-size: 11px;
-  line-height: 1.8;
-}
-
-.career-highlight .highlight-mark {
-  color: var(--rust);
-  flex-shrink: 0;
-  font-weight: 700;
-}
-
 .gallery-section { overflow: hidden; }
 
 .gallery-intro {
@@ -815,9 +667,7 @@ footer strong {
   .pin-two img { height: 150px; }
   .pin-three img { height: 160px; }
   .pin-four img { height: 215px; }
-  .section, .profile-inner, .expect-inner, .career-inner {
-    padding: 62px 24px;
-  }
+  .section, .profile-inner, .expect-inner { padding: 62px 24px; }
   .profile-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
   .photo-wall { columns: 3; }
   .contact-section { padding: 62px 24px 75px; }
@@ -855,10 +705,7 @@ footer strong {
   .pin-four img { height: 220px; }
   .pin-caption { font-size: 13px; padding: 8px 5px; }
 
-  .section, .profile-inner, .expect-inner, .career-inner {
-    padding: 55px 20px;
-  }
-
+  .section, .profile-inner, .expect-inner { padding: 55px 20px; }
   .section-top { display: block; margin-bottom: 25px; }
   .section-title { font-size: 43px; }
   .section-note { margin-top: 12px; }
@@ -873,22 +720,6 @@ footer strong {
   .info-card { padding: 15px 13px; min-height: 100px; }
   .info-label { font-size: 8px; letter-spacing: .09em; }
   .info-value { font-size: 19px; }
-
-  /* Career cards adapt to narrow mobile screens */
-  .career-grid { grid-template-columns: 1fr; gap: 13px; }
-  .career-card { padding: 22px 18px; }
-  .career-company { gap: 11px; margin-bottom: 21px; }
-  .company-wordmark {
-    min-width: 91px;
-    min-height: 43px;
-    padding: 8px 9px;
-    font-size: 18px;
-  }
-  .accenture-wordmark { font-size: 17px; }
-  .accenture-wordmark .brand-arrow { font-size: 20px; }
-  .career-company-text h3 { font-size: 21px; }
-  .career-role { font-size: 25px; }
-  .career-description { font-size: 12px; }
 
   .photo-wall { columns: 2; column-gap: 10px; }
   .photo-card { padding: 5px; margin-bottom: 10px; }
@@ -929,7 +760,6 @@ footer strong {
     <div class="nav-links">
       <a href="#story">My Story</a>
       <a href="#profile">Profile</a>
-      <a href="#career">Career</a>
       <a href="#gallery">Photos</a>
       <a href="#expectations">My Values</a>
       <a href="#contact" class="nav-button">Let's Connect ↗</a>
@@ -1064,107 +894,11 @@ footer strong {
     </div>
   </section>
 
-  <!-- CAREER SECTION: Deloitte and Accenture -->
-  <section class="career-section fade-up" id="career">
-    <div class="career-inner">
-      <div class="section-top">
-        <div>
-          <div class="kicker">03 — My professional journey</div>
-          <h2 class="section-title">Where I work.</h2>
-        </div>
-        <p class="section-note">
-          A look at my professional experience, technical skills and career journey.
-        </p>
-      </div>
-
-      <div class="career-grid">
-
-        <!-- Deloitte -->
-        <article class="career-card">
-          <div class="career-company">
-            <div class="company-wordmark deloitte-wordmark" aria-label="Deloitte">
-              deloitte<span class="brand-dot">.</span>
-            </div>
-            <div class="career-company-text">
-              <h3>Deloitte USI</h3>
-              <p>Professional Experience</p>
-            </div>
-          </div>
-
-          <h3 class="career-role">Data Engineer</h3>
-
-          <p class="career-description">
-            Working on a data migration project for Corebridge Financial,
-            supporting the migration of Oracle ADR data to Snowflake.
-            My work involves data engineering, SQL, data validation and
-            migration-related activities in a financial services environment.
-          </p>
-
-          <div class="career-divider"></div>
-
-          <div class="career-highlight">
-            <span class="highlight-mark">✳</span>
-            <span>Project focus: Oracle ADR to Snowflake migration.</span>
-          </div>
-
-          <div class="career-skills">
-            <span>Snowflake</span>
-            <span>Oracle</span>
-            <span>SQL</span>
-            <span>Data Migration</span>
-            <span>Data Validation</span>
-          </div>
-        </article>
-
-        <!-- Accenture -->
-        <article class="career-card">
-          <div class="career-company">
-            <div class="company-wordmark accenture-wordmark" aria-label="Accenture">
-              <span class="brand-arrow">&gt;</span>accenture
-            </div>
-            <div class="career-company-text">
-              <h3>Accenture</h3>
-              <p>Previous Experience</p>
-            </div>
-          </div>
-
-          <h3 class="career-role">Software Engineer</h3>
-
-          <p class="career-description">
-            Worked with Oracle E-Business Suite applications, SQL and PL/SQL,
-            handling production support, issue resolution, data fixes and
-            automation. Also supported business processes involving sales
-            orders, service modules and related enterprise applications.
-          </p>
-
-          <div class="career-divider"></div>
-
-          <div class="career-highlight">
-            <span class="highlight-mark">✳</span>
-            <span>
-              Focus areas: enterprise application support, SQL development,
-              troubleshooting and process automation.
-            </span>
-          </div>
-
-          <div class="career-skills">
-            <span>Oracle EBS</span>
-            <span>SQL</span>
-            <span>PL/SQL</span>
-            <span>Production Support</span>
-            <span>Automation</span>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
   <section class="gallery-section fade-up" id="gallery">
     <div class="section">
       <div class="section-top">
         <div>
-          <div class="kicker">04 — Photo journal</div>
+          <div class="kicker">03 — Photo journal</div>
           <h2 class="section-title">Life in little frames.</h2>
         </div>
         <p class="section-note">
@@ -1194,7 +928,7 @@ footer strong {
     <div class="expect-inner">
       <div class="section-top">
         <div>
-          <div class="kicker">05 — Looking towards the future</div>
+          <div class="kicker">04 — Looking towards the future</div>
           <h2 class="section-title">What matters most.</h2>
         </div>
         <p class="section-note">
@@ -1236,7 +970,7 @@ footer strong {
   <section class="contact-section fade-up" id="contact">
     <div class="contact-box">
       <div>
-        <div class="kicker">06 — Start a conversation</div>
+        <div class="kicker">05 — Start a conversation</div>
         <h2>Good things begin<br>with a hello.</h2>
         <p>
           For further details or to connect, feel free to reach out
