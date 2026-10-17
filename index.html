@@ -2,304 +2,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10231d">
-  <title>Muhammad Jinas KJ | Marriage Profile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .hero-photo {
-      overflow: hidden;
-      border-radius: 24px;
-      background: #e8e8e2;
-    }
-    .hero-photo img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      min-height: 300px;
-      object-fit: cover;
-      object-position: center;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .gallery-slot {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-      background: #e8e8e2;
-      aspect-ratio: 3 / 4;
-      cursor: pointer;
-    }
-    .gallery-slot img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      transition: transform .4s ease;
-    }
-    .gallery-slot:hover img {
-      transform: scale(1.06);
-    }
-    .gallery-slot span {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 24px 10px 10px;
-      color: white;
-      background: linear-gradient(transparent, rgba(0,0,0,.65));
-      font-size: 12px;
-    }
-    .gallery-viewer {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      inset: 0;
-      background: rgba(8, 16, 13, .94);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .gallery-viewer.open { display: flex; }
-    .gallery-viewer img {
-      max-width: min(90vw, 650px);
-      max-height: 82vh;
-      object-fit: contain;
-      border-radius: 12px;
-    }
-    .viewer-close, .viewer-prev, .viewer-next {
-      position: absolute;
-      border: 0;
-      color: white;
-      background: rgba(255,255,255,.15);
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      font-size: 25px;
-      cursor: pointer;
-    }
-    .viewer-close { top: 18px; right: 18px; }
-    .viewer-prev { left: 14px; }
-    .viewer-next { right: 14px; }
-    .viewer-count {
-      position: absolute;
-      bottom: 18px;
-      color: white;
-      font: 14px "DM Sans", sans-serif;
-    }
-    @media (max-width: 650px) {
-      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-      .hero-photo img { min-height: 240px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f5ef">
+<title>Muhammed Jinas KJ | Marriage Profile</title>
+<meta name="description" content="Marriage profile of Muhammed Jinas KJ.">
+
+<style>
+:root {
+  --bg: #f8f5ef;
+  --card: #fffdf9;
+  --ink: #26372f;
+  --muted: #77796f;
+  --accent: #a77c50;
+  --line: #e8e0d4;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.container {
+  width: min(1080px, 92%);
+  margin: auto;
+}
+header {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.nav a { font-size: 13px; }
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+  padding-top: 55px;
+  padding-bottom: 65px;
+}
+.hero-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 180px 180px 18px 18px;
+  background: #e9e0d2;
+  aspect-ratio: 4 / 5;
+  max-height: 570px;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-copy .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  color: var(--accent);
+}
+h1 {
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.12;
+  font-weight: normal;
+  margin: 15px 0;
+}
+.hero-copy p { color: var(--muted); }
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 22px 0;
+}
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 5px 13px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+.button {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 30px;
+  background: var(--ink);
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+section { padding: 48px 0; }
+.section-head { margin-bottom: 24px; }
+.section-head small {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+h2 {
+  font-weight: normal;
+  font-size: clamp(27px, 4vw, 38px);
+  margin: 4px 0;
+}
+.intro {
+  max-width: 720px;
+  color: #62665e;
+}
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.detail {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: 14px;
+}
+.detail small {
+  display: block;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.detail strong { font-size: 16px; font-weight: normal; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  border-radius: 13px;
+  background: #e9e0d2;
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 10px 10px;
+  color: white;
+  text-align: left;
+  font: 12px Arial, sans-serif;
+  background: linear-gradient(transparent, #0009);
+}
+.expectations {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+}
+.expectations p { color: #62665e; }
+footer {
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: #101410f2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 18px;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.lightbox button {
+  position: absolute;
+  border: 0;
+  background: #ffffff20;
+  color: white;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#closeLightbox { top: 14px; right: 16px; }
+#prevPhoto { left: 12px; }
+#nextPhoto { right: 12px; }
+#photoCounter {
+  position: absolute;
+  bottom: 15px;
+  color: white;
+  font: 13px Arial, sans-serif;
+}
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+  .hero-photo {
+    width: min(100%, 360px);
+    margin: auto;
+    max-height: 460px;
+  }
+  .hero-copy { text-align: center; }
+  .pills { justify-content: center; }
+  .details { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  section { padding: 32px 0; }
+  .expectations { padding: 22px; }
+  #prevPhoto { left: 5px; }
+  #nextPhoto { right: 5px; }
+}
+</style>
 </head>
+
 <body>
-  <div class="topbar">
-    <span>Digital Marriage Profile</span>
-    <span>Jinas</span>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">JINAS KJ</a>
+    <a href="#profile">My Profile&nbsp; ↘</a>
   </div>
+</header>
 
-  <header class="hero" id="home">
+<main>
+  <div class="container hero" id="profile">
     <div class="hero-photo">
-      <img id="heroImage" src="Photo%201.jpeg" alt="Muhammad Jinas KJ"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-      <div class="photo-placeholder" style="display:none">YOUR<br>PHOTO</div>
+      <img
+        id="heroImage"
+        src="Photo%201.jpeg"
+        alt="Muhammed Jinas KJ"
+        onerror="this.alt='Main photo unavailable';this.style.display='none'"
+      >
     </div>
+
     <div class="hero-copy">
-      <p class="eyebrow">Assalamu Alaikum</p>
-      <h1>Muhammad<br><span>Jinas KJ</span></h1>
-      <p class="role">Data Engineer · Software Engineer</p>
-      <p class="hero-note">A simple, grounded and family-oriented profile — getting to know me beyond a photograph.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#about">Know Me Better</a>
-        <a class="btn ghost" id="whatsappTop" href="#">WhatsApp</a>
+      <div class="eyebrow">A journey towards togetherness</div>
+      <h1>Muhammed<br>Jinas KJ</h1>
+      <p>A simple introduction to who I am, my values, and the future I hope to build with the right person.</p>
+      <div class="pills">
+        <span class="pill">26 Years</span>
+        <span class="pill">170 cm</span>
+        <span class="pill">B.Tech CSE</span>
       </div>
+      <a class="button" href="#about">Discover My Story&nbsp; ↘</a>
     </div>
-  </header>
-
-  <main>
-    <section id="about" class="section intro">
-      <div class="section-label">01 / About Me</div>
-      <div>
-        <h2>More than a biodata.</h2>
-        <p>I am Muhammad Jinas KJ, a B.Tech Computer Science graduate currently working as a Data Engineer at Deloitte USI, Bengaluru. I value family, personal growth, a stable career and a meaningful life built on good character and mutual respect.</p>
-        <div class="quick-grid">
-          <div><small>Age</small><strong>26</strong></div>
-          <div><small>Height</small><strong>170 cm</strong></div>
-          <div><small>Education</small><strong>B.Tech CSE</strong></div>
-          <div><small>Experience</small><strong>5 Years</strong></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section details">
-      <div class="section-label">02 / Personal Details</div>
-      <div class="cards">
-        <div class="card"><span>Date of Birth</span><b>23 April 2000</b></div>
-        <div class="card"><span>Place of Birth</span><b>Mannarkkad</b></div>
-        <div class="card"><span>Native Place</span><b>Kalladikode</b></div>
-        <div class="card"><span>Current Location</span><b>Kalladikode</b></div>
-        <div class="card"><span>Height</span><b>170 cm</b></div>
-        <div class="card"><span>Weight</span><b>70 kg</b></div>
-        <div class="card"><span>Blood Group</span><b>O Positive</b></div>
-        <div class="card"><span>Marital Status</span><b>Never Married</b></div>
-        <div class="card"><span>Religion</span><b>Muslim</b></div>
-        <div class="card"><span>Community</span><b>Sunni Mappila</b></div>
-        <div class="card"><span>Madhhab</span><b>Shafi</b></div>
-        <div class="card"><span>Languages</span><b>English · Hindi · Arabic · Tamil</b></div>
-      </div>
-    </section>
-
-    <section class="section career">
-      <div class="section-label">03 / Career Journey</div>
-      <div class="timeline">
-        <article class="timeline-item">
-          <span class="dot"></span>
-          <p>Current</p>
-          <h3>Data Engineer</h3>
-          <strong>Deloitte USI</strong>
-          <span>Marathahalli, Bengaluru · Current CTC ₹19.1 LPA</span>
-        </article>
-        <article class="timeline-item">
-          <span class="dot"></span>
-          <p>Previous</p>
-          <h3>Software Engineer</h3>
-          <strong>Accenture</strong>
-          <span>Started professional career in 2022</span>
-        </article>
-        <article class="timeline-item">
-          <span class="dot"></span>
-          <p>Education</p>
-          <h3>B.Tech — Computer Science Engineering</h3>
-          <strong>M E College of Engineering</strong>
-          <span>APJ Abdul Kalam Technological University · 2017–2021 · CGPA 7.89</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section family">
-      <div class="section-label">04 / Family</div>
-      <div class="family-layout">
-        <div>
-          <h2>Rooted in family.</h2>
-          <p>Family origin: Kallingal House, Kalladikode.</p>
-          <p>Our family is based in Kalladikode. Detailed family information can be expanded here later.</p>
-        </div>
-        <div class="family-cards">
-          <div class="family-card"><span>Father</span><b>Jaffar</b><small>Business · Bakery Business</small></div>
-          <div class="family-card"><span>Mother</span><b>Seema</b><small>Homemaker</small></div>
-          <div class="family-card"><span>Brother</span><b>Fajas J</b><small>Details to be updated</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section gallery" id="gallery">
-      <div class="section-label">05 / Photo Gallery</div>
-      <div class="gallery-head">
-        <h2>Moments &amp; memories.</h2>
-        <p>A few moments from my journey. Tap any photo to view the gallery.</p>
-      </div>
-      <div class="gallery-grid" id="galleryGrid">
-        <div class="gallery-slot" data-photo="0"><img src="Photo%201.jpeg" alt="Jinas photo 1" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 01</span></div>
-        <div class="gallery-slot" data-photo="1"><img src="Photo%202.jpeg" alt="Jinas photo 2" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 02</span></div>
-        <div class="gallery-slot" data-photo="2"><img src="Photo%203.jpeg" alt="Jinas photo 3" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 03</span></div>
-        <div class="gallery-slot" data-photo="3"><img src="Photo%204.jpeg" alt="Jinas photo 4" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 04</span></div>
-        <div class="gallery-slot" data-photo="4"><img src="Photo%205.jpeg" alt="Jinas photo 5" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 05</span></div>
-        <div class="gallery-slot" data-photo="5"><img src="Photo%206.jpeg" alt="Jinas photo 6" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 06</span></div>
-        <div class="gallery-slot" data-photo="6"><img src="Photo%207.jpeg" alt="Jinas photo 7" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 07</span></div>
-        <div class="gallery-slot" data-photo="7"><img src="Photo%208.jpeg" alt="Jinas photo 8" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 08</span></div>
-      </div>
-    </section>
-
-    <section class="section contact">
-      <div class="contact-box">
-        <p class="eyebrow">Let's connect</p>
-        <h2>For families who would like to know more.</h2>
-        <p>Feel free to get in touch through WhatsApp or phone.</p>
-        <div class="hero-actions">
-          <a class="btn primary" id="whatsappBottom" href="#">Message on WhatsApp</a>
-          <a class="btn ghost" id="callBottom" href="#">Call</a>
-        </div>
-        <div class="socials">
-          <a id="linkedin" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a id="instagram" href="#" target="_blank" rel="noopener">Instagram ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>© <span id="year"></span> Muhammad Jinas KJ · Digital Marriage Profile</footer>
-
-  <div class="gallery-viewer" id="galleryViewer" aria-label="Photo viewer" aria-modal="true" role="dialog">
-    <button class="viewer-close" id="viewerClose" aria-label="Close gallery">×</button>
-    <button class="viewer-prev" id="viewerPrev" aria-label="Previous photo">‹</button>
-    <img id="viewerImage" src="Photo%201.jpeg" alt="Gallery photo">
-    <button class="viewer-next" id="viewerNext" aria-label="Next photo">›</button>
-    <div class="viewer-count" id="viewerCount">1 / 8</div>
   </div>
 
-  <script src="data.js"></script>
-  <script>
-    (function () {
-      const photos = [
-        "Photo%201.jpeg", "Photo%202.jpeg", "Photo%203.jpeg", "Photo%204.jpeg",
-        "Photo%205.jpeg", "Photo%206.jpeg", "Photo%207.jpeg", "Photo%208.jpeg"
-      ];
-      const viewer = document.getElementById("galleryViewer");
-      const viewerImage = document.getElementById("viewerImage");
-      const viewerCount = document.getElementById("viewerCount");
-      let current = 0;
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <small>A little about me</small>
+        <h2>About Me</h2>
+      </div>
+      <p class="intro">
+        I value family, faith, kindness, and personal growth. I enjoy travelling,
+        exploring new experiences, and making time for the people who matter.
+        I believe a good marriage is built on understanding, mutual respect,
+        honest communication, and growing together through life's different stages.
+      </p>
+    </div>
+  </section>
 
-      function showPhoto(index) {
-        current = (index + photos.length) % photos.length;
-        viewerImage.src = photos[current];
-        viewerCount.textContent = (current + 1) + " / " + photos.length;
-        viewer.classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-      function closeViewer() {
-        viewer.classList.remove("open");
-        document.body.style.overflow = "";
-      }
+  <section id="details">
+    <div class="container">
+      <div class="section-head">
+        <small>Getting to know me</small>
+        <h2>Personal Details</h2>
+      </div>
+      <div class="details">
+        <div class="detail"><small>Full Name</small><strong>Muhammed Jinas KJ</strong></div>
+        <div class="detail"><small>Date of Birth</small><strong>23 April 2000</strong></div>
+        <div class="detail"><small>Height</small><strong>170 cm</strong></div>
+        <div class="detail"><small>Native Place</small><strong>Kalladikode, Kerala</strong></div>
+        <div class="detail"><small>Religion</small><strong>Muslim</strong></div>
+        <div class="detail"><small>Education</small><strong>B.Tech, Computer Science</strong></div>
+        <div class="detail"><small>Profession</small><strong>Data Engineer</strong></div>
+        <div class="detail"><small>Current Location</small><strong>Bengaluru, Karnataka</strong></div>
+        <div class="detail"><small>Languages</small><strong>English, Hindi, Arabic, Tamil</strong></div>
+      </div>
+    </div>
+  </section>
 
-      document.querySelectorAll(".gallery-slot").forEach(function (slot) {
-        slot.addEventListener("click", function () {
-          showPhoto(Number(slot.dataset.photo));
-        });
-      });
-      document.getElementById("viewerClose").addEventListener("click", closeViewer);
-      document.getElementById("viewerPrev").addEventListener("click", function () {
-        showPhoto(current - 1);
-      });
-      document.getElementById("viewerNext").addEventListener("click", function () {
-        showPhoto(current + 1);
-      });
-      viewer.addEventListener("click", function (event) {
-        if (event.target === viewer) closeViewer();
-      });
-      document.addEventListener("keydown", function (event) {
-        if (!viewer.classList.contains("open")) return;
-        if (event.key === "Escape") closeViewer();
-        if (event.key === "ArrowLeft") showPhoto(current - 1);
-        if (event.key === "ArrowRight") showPhoto(current + 1);
-      });
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <small>Moments & memories</small>
+        <h2>Photo Gallery</h2>
+        <p class="intro">Tap any photo to view it in full size.</p>
+      </div>
 
-      let touchStartX = 0;
-      viewer.addEventListener("touchstart", function (event) {
-        touchStartX = event.changedTouches[0].screenX;
-      }, { passive: true });
-      viewer.addEventListener("touchend", function (event) {
-        const diff = event.changedTouches[0].screenX - touchStartX;
-        if (Math.abs(diff) > 50) showPhoto(current + (diff < 0 ? 1 : -1));
-      }, { passive: true });
-    })();
-  </script>
+      <div class="gallery" id="galleryGrid">
+        <button class="gallery-item" data-photo="0" aria-label="View photo 1"><img src="Photo%201.jpeg" alt="Jinas photo 1" loading="lazy"><span>Photo 01 ↗</span></button>
+        <button class="gallery-item" data-photo="1" aria-label="View photo 2"><img src="Photo%202.jpeg" alt="Jinas photo 2" loading="lazy"><span>Photo 02 ↗</span></button>
+        <button class="gallery-item" data-photo="2" aria-label="View photo 3"><img src="Photo%203.jpeg" alt="Jinas photo 3" loading="lazy"><span>Photo 03 ↗</span></button>
+        <button class="gallery-item" data-photo="3" aria-label="View photo 4"><img src="Photo%204.jpeg" alt="Jinas photo 4" loading="lazy"><span>Photo 04 ↗</span></button>
+        <button class="gallery-item" data-photo="4" aria-label="View photo 5"><img src="Photo%205.jpeg" alt="Jinas photo 5" loading="lazy"><span>Photo 05 ↗</span></button>
+        <button class="gallery-item" data-photo="5" aria-label="View photo 6"><img src="Photo%206.jpeg" alt="Jinas photo 6" loading="lazy"><span>Photo 06 ↗</span></button>
+        <button class="gallery-item" data-photo="6" aria-label="View photo 7"><img src="Photo%207.jpeg" alt="Jinas photo 7" loading="lazy"><span>Photo 07 ↗</span></button>
+        <button class="gallery-item" data-photo="7" aria-label="View photo 8"><img src="Photo%208.jpeg" alt="Jinas photo 8" loading="lazy"><span>Photo 08 ↗</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="partner">
+    <div class="container">
+      <div class="section-head">
+        <small>Looking ahead</small>
+        <h2>Partner Expectations</h2>
+      </div>
+      <div class="expectations">
+        <p>
+          I hope to find a kind-hearted, caring, and God-conscious partner
+          with whom I can build a peaceful and supportive life. I value mutual
+          respect, trust, open communication, and a balance between Deen and Dunya.
+          I would love for us to encourage each other's ambitions, respect each
+          other's individuality, and share life's joys and responsibilities as a team.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Made with care, with the hope of a beautiful new beginning.</p>
+    <p>© <span id="year"></span> Muhammed Jinas KJ</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="closeLightbox" aria-label="Close photo viewer">×</button>
+  <button id="prevPhoto" aria-label="Previous photo">‹</button>
+  <img id="lightboxImage" src="" alt="Full size photo">
+  <button id="nextPhoto" aria-label="Next photo">›</button>
+  <div id="photoCounter"></div>
+</div>
+
+<script>
+const photos = [
+  "Photo%201.jpeg",
+  "Photo%202.jpeg",
+  "Photo%203.jpeg",
+  "Photo%204.jpeg",
+  "Photo%205.jpeg",
+  "Photo%206.jpeg",
+  "Photo%207.jpeg",
+  "Photo%208.jpeg"
+];
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const counter = document.getElementById("photoCounter");
+let currentPhoto = 0;
+
+function showPhoto(index) {
+  currentPhoto = (index + photos.length) % photos.length;
+  lightboxImage.src = photos[currentPhoto];
+  counter.textContent = (currentPhoto + 1) + " / " + photos.length;
+}
+
+function openPhoto(index) {
+  showPhoto(index);
+  lightbox.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closePhoto() {
+  lightbox.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.querySelectorAll(".gallery-item").forEach(item => {
+  item.addEventListener("click", () => openPhoto(Number(item.dataset.photo)));
+});
+
+document.getElementById("closeLightbox").addEventListener("click", closePhoto);
+document.getElementById("prevPhoto").addEventListener("click", () => showPhoto(currentPhoto - 1));
+document.getElementById("nextPhoto").addEventListener("click", () => showPhoto(currentPhoto + 1));
+
+lightbox.addEventListener("click", event => {
+  if (event.target === lightbox) closePhoto();
+});
+
+document.addEventListener("keydown", event => {
+  if (!lightbox.classList.contains("open")) return;
+  if (event.key === "Escape") closePhoto();
+  if (event.key === "ArrowRight") showPhoto(currentPhoto + 1);
+  if (event.key === "ArrowLeft") showPhoto(currentPhoto - 1);
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
