@@ -2,546 +2,1324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173d32">
-  <meta name="description" content="Muhammed Jinas KJ - Marriage Profile">
-  <title>Muhammed Jinas KJ | Marriage Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123c32">
+<meta name="description" content="The personal marriage profile of Muhammed Jinas KJ.">
+<title>Jinas | A Personal Profile</title>
 
-  <style>
-    :root {
-      --green: #173d32;
-      --cream: #f8f5ed;
-      --paper: #fffdf8;
-      --gold: #c8a45d;
-      --text: #26342d;
-      --muted: #70776e;
-      --border: #e8e0d1;
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Georgia, "Times New Roman", serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
+<style>
+:root {
+  --green: #123c32;
+  --green-light: #245749;
+  --cream: #f8f5ee;
+  --paper: #fffdf8;
+  --gold: #b79a60;
+  --gold-light: #dfcc9d;
+  --ink: #202a24;
+  --muted: #72786f;
+  --line: rgba(18,60,50,.14);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
 
-    .topbar {
-      background: var(--green);
-      color: white;
-      text-align: center;
-      padding: 13px 16px;
-      letter-spacing: 2px;
-      font: 12px Arial, sans-serif;
-      text-transform: uppercase;
-    }
+* { box-sizing: border-box; }
 
-    .hero {
-      min-height: 570px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 55px 20px;
-      background: radial-gradient(ellipse at top, rgba(200,164,93,.15), transparent 60%), var(--cream);
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
 
-    .hero-inner {
-      width: 100%;
-      max-width: 960px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 48px;
-    }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
 
-    .hero-photo-wrap {
-      max-width: 370px;
-      width: 100%;
-      margin: auto;
-      padding: 12px;
-      border: 1px solid var(--gold);
-      border-radius: 190px 190px 18px 18px;
-    }
+body, button, a { -webkit-tap-highlight-color: transparent; }
 
-    .hero-photo {
-      display: block;
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-      border-radius: 180px 180px 12px 12px;
-      background: #e7e0d2;
-      cursor: pointer;
-    }
+a { color: inherit; text-decoration: none; }
 
-    .eyebrow {
-      color: #9b7a3e;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font: 11px Arial, sans-serif;
-      margin-bottom: 18px;
-    }
+button { font: inherit; }
 
-    h1 {
-      color: var(--green);
-      font-size: clamp(38px, 5vw, 60px);
-      font-weight: normal;
-      line-height: 1.12;
-      margin-bottom: 18px;
-    }
+::selection { background: var(--gold-light); color: var(--green); }
 
-    .hero-subtitle { font-size: 17px; color: var(--muted); margin-bottom: 24px; }
-    .gold-line { width: 70px; height: 2px; background: var(--gold); margin: 20px 0; }
-    .hero-note { font-size: 15px; max-width: 380px; color: #59645b; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(248,245,238,.93);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
 
-    .section { padding: 72px 20px; }
-    .section.white { background: var(--paper); }
-    .container { max-width: 900px; margin: auto; }
-    .section-heading { text-align: center; margin-bottom: 35px; }
-    .section-heading .eyebrow { margin-bottom: 8px; }
+.nav {
+  max-width: 1180px;
+  margin: auto;
+  min-height: 72px;
+  padding: 12px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-    h2 {
-      color: var(--green);
-      font-size: clamp(29px, 4vw, 39px);
-      font-weight: normal;
-      line-height: 1.25;
-    }
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
 
-    .heading-line { width: 52px; height: 2px; background: var(--gold); margin: 18px auto 0; }
+.brand-mark {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 19px;
+}
 
-    .about-text {
-      max-width: 720px;
-      margin: auto;
-      text-align: center;
-      font-size: 17px;
-      line-height: 2;
-      color: #505b52;
-    }
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  color: #48574d;
+}
 
-    .details-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0 28px;
-      max-width: 760px;
-      margin: auto;
-    }
+.nav-links a { transition: color .2s; }
+.nav-links a:hover { color: var(--gold); }
 
-    .detail {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 15px 0;
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-    }
+.nav-cta {
+  background: var(--green);
+  color: white !important;
+  border-radius: 2px;
+  padding: 10px 15px;
+}
 
-    .detail span:first-child { color: var(--muted); }
-    .detail span:last-child { color: var(--green); text-align: right; font-weight: bold; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--green);
+  color: var(--paper);
+}
 
-    .gallery-intro { color: var(--muted); font-size: 15px; text-align: center; margin-top: 12px; }
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgba(223,204,157,.13);
+  border-radius: 50%;
+  right: -190px;
+  top: -260px;
+  box-shadow: 0 0 0 55px rgba(223,204,157,.025),
+              0 0 0 110px rgba(223,204,157,.02);
+}
 
-    .globe-stage {
-      height: 400px;
-      max-width: 760px;
-      margin: 15px auto 0;
-      position: relative;
-      perspective: 1000px;
-      overflow: hidden;
-      touch-action: pan-y;
-      cursor: grab;
-      user-select: none;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 50%, rgba(255,255,255,.025));
+}
 
-    .globe-stage:active { cursor: grabbing; }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: auto;
+  min-height: 600px;
+  padding: 76px 36px 80px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 64px;
+}
 
-    .globe {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      left: 50%;
-      top: 48%;
-      transform-style: preserve-3d;
-    }
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--gold-light);
+  font-size: 10px;
+  letter-spacing: .23em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-    .globe-card {
-      position: absolute;
-      width: 180px;
-      height: 245px;
-      left: -90px;
-      top: -122px;
-      border: 3px solid white;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #e7e0d2;
-      box-shadow: 0 10px 28px rgba(23,61,50,.18);
-      backface-visibility: hidden;
-      cursor: pointer;
-    }
+.eyebrow::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
 
-    .globe-card img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(54px, 7vw, 94px);
+  line-height: .94;
+  font-weight: 500;
+  letter-spacing: -.035em;
+  margin: 27px 0 19px;
+}
 
-    .gallery-controls { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 5px; }
+.hero h1 span {
+  display: block;
+  color: var(--gold-light);
+  font-style: italic;
+}
 
-    .gallery-btn {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      border: 1px solid var(--gold);
-      background: var(--paper);
-      color: var(--green);
-      font-size: 22px;
-      cursor: pointer;
-    }
+.hero-subtitle {
+  font-size: 14px;
+  color: rgba(255,253,248,.76);
+  max-width: 380px;
+  line-height: 1.9;
+}
 
-    .gallery-btn:hover { background: var(--green); color: white; }
-    .gallery-hint { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
+.hero-rule {
+  width: 65px;
+  height: 1px;
+  background: var(--gold);
+  margin: 28px 0;
+}
 
-    .expectation-card {
-      max-width: 740px;
-      margin: auto;
-      padding: 35px;
-      border: 1px solid var(--border);
-      background: var(--cream);
-      text-align: center;
-      border-radius: 4px;
-    }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  font-size: 12px;
+  color: #e6e7dc;
+}
 
-    .expectation-card p { color: #505b52; font-size: 17px; line-height: 2; }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 31px;
+}
 
-    .contact-section { background: var(--green); color: white; }
-    .contact-section h2 { color: white; }
-    .contact-section .eyebrow { color: #e0c17d; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 12px 19px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  transition: transform .2s, background .2s, color .2s;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
 
-    .contact-description {
-      text-align: center;
-      color: #e1e8e1;
-      margin: 15px auto 28px;
-      max-width: 540px;
-      font-size: 15px;
-    }
+.btn:hover { transform: translateY(-2px); }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      max-width: 580px;
-      margin: auto;
-    }
+.btn-gold {
+  background: var(--gold-light);
+  color: var(--green);
+}
 
-    .contact-link {
-      min-height: 58px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 12px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 8px;
-      color: white;
-      background: rgba(255,255,255,.06);
-      font: 14px Arial, sans-serif;
-      overflow-wrap: anywhere;
-      transition: background .2s;
-    }
+.btn-outline {
+  border-color: rgba(255,255,255,.35);
+  color: white;
+  background: transparent;
+}
 
-    .contact-link:hover { background: rgba(255,255,255,.16); border-color: var(--gold); }
-    .contact-icon { font-size: 19px; color: #e0c17d; flex-shrink: 0; }
+.hero-photo-wrap {
+  position: relative;
+  width: min(100%, 410px);
+  margin: auto;
+  padding: 14px;
+  border: 1px solid rgba(223,204,157,.55);
+}
 
-    .footer {
-      background: #102e26;
-      color: #d9e0d9;
-      text-align: center;
-      padding: 22px 15px;
-      font: 12px Arial, sans-serif;
-    }
+.hero-photo-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 27px -13px -13px 27px;
+  border: 1px solid rgba(223,204,157,.3);
+  pointer-events: none;
+}
 
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(7,17,13,.92);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center 28%;
+  background: #e8e0d0;
+  position: relative;
+  z-index: 1;
+}
 
-    .lightbox.open { display: flex; }
-    .lightbox img { max-width: 92vw; max-height: 84vh; object-fit: contain; border-radius: 8px; }
+.photo-label {
+  position: absolute;
+  z-index: 2;
+  left: -18px;
+  bottom: 37px;
+  background: var(--paper);
+  color: var(--green);
+  padding: 13px 21px;
+  box-shadow: 0 8px 30px #0002;
+}
 
-    .lightbox-close {
-      position: absolute;
-      top: 18px;
-      right: 22px;
-      color: white;
-      border: 1px solid rgba(255,255,255,.5);
-      background: rgba(255,255,255,.08);
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      font-size: 25px;
-      cursor: pointer;
-    }
+.photo-label small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
 
-    @media (max-width: 650px) {
-      .topbar { font-size: 10px; letter-spacing: 1.5px; }
-      .hero { padding: 35px 20px 45px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 28px; }
-      .hero-photo-wrap { max-width: 270px; }
-      .hero-photo { height: 320px; }
-      .hero-copy { text-align: center; }
-      .hero-copy .gold-line { margin: 18px auto; }
-      .hero-note { margin: auto; }
-      .section { padding: 55px 18px; }
-      .about-text { font-size: 16px; text-align: left; }
-      .details-grid { grid-template-columns: 1fr; }
-      .globe-stage { height: 330px; }
-      .globe-card { width: 145px; height: 200px; left: -72px; top: -100px; }
-      .expectation-card { padding: 24px 20px; }
-      .expectation-card p { font-size: 16px; text-align: left; }
-      .contact-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+.photo-label strong {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 96px 30px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.section-kicker {
+  color: #8e784a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: clamp(40px, 5vw, 59px);
+  font-weight: 500;
+  line-height: 1.05;
+  margin: 13px 0 16px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 auto;
+  max-width: 490px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-emblem {
+  min-height: 300px;
+  background: var(--green);
+  color: var(--gold-light);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-emblem::before,
+.about-emblem::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(223,204,157,.25);
+  border-radius: 50%;
+}
+
+.about-emblem::after {
+  width: 270px;
+  height: 270px;
+}
+
+.emblem-content { position: relative; z-index: 1; }
+
+.emblem-symbol {
+  font-family: var(--serif);
+  font-size: 68px;
+  line-height: 1.2;
+}
+
+.emblem-content p {
+  color: #f1e8d3;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: .2em;
+}
+
+.about-copy h3 {
+  color: var(--green);
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 35px;
+  margin: 0 0 16px;
+}
+
+.about-copy p {
+  color: #5e685f;
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 0 15px;
+}
+
+.signature {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 28px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.details-section {
+  background: #eeeae0;
+  border-top: 1px solid #e4dece;
+  border-bottom: 1px solid #e4dece;
+}
+
+.details-grid {
+  max-width: 1100px;
+  margin: auto;
+  padding: 88px 30px;
+}
+
+.details-grid .section-heading { margin-bottom: 38px; }
+
+.detail-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.detail-card {
+  background: var(--paper);
+  border: 1px solid rgba(18,60,50,.09);
+  padding: 23px 22px;
+  min-height: 104px;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(18,60,50,.07);
+}
+
+.detail-card .label {
+  color: #8a806d;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.detail-card .value {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.gallery-section {
+  background: var(--green);
+  color: var(--paper);
+  overflow: hidden;
+}
+
+.gallery-section .section-heading h2 { color: var(--paper); }
+.gallery-section .section-heading p { color: rgba(255,253,248,.68); }
+
+.gallery-stage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.globe {
+  width: 100%;
+  height: 390px;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  perspective: 1000px;
+}
+
+.globe:active { cursor: grabbing; }
+
+.globe::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid rgba(223,204,157,.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 30px rgba(223,204,157,.025),
+              0 0 0 70px rgba(223,204,157,.018);
+}
+
+.gallery-card {
+  position: absolute;
+  width: 205px;
+  height: 285px;
+  left: 50%;
+  top: 50%;
+  margin-left: -102.5px;
+  margin-top: -142.5px;
+  border: 1px solid rgba(223,204,157,.7);
+  padding: 6px;
+  background: #f7f1e5;
+  box-shadow: 0 15px 35px #0004;
+  transition: transform .45s ease, opacity .45s ease, filter .45s ease;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  background: #e8e0d0;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 14px;
+}
+
+.gallery-arrow {
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(223,204,157,.45);
+  background: transparent;
+  color: var(--gold-light);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background .2s;
+}
+
+.gallery-arrow:hover { background: rgba(223,204,157,.12); }
+
+.gallery-count {
+  color: rgba(255,253,248,.75);
+  font-size: 11px;
+  letter-spacing: .13em;
+  min-width: 65px;
+  text-align: center;
+}
+
+.gallery-hint {
+  text-align: center;
+  color: rgba(255,253,248,.55);
+  font-size: 10px;
+  letter-spacing: .12em;
+  margin-top: 16px;
+}
+
+.expectations-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.expect-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 35px 33px;
+  position: relative;
+}
+
+.expect-card::before {
+  content: "“";
+  position: absolute;
+  right: 23px;
+  top: 3px;
+  color: #e6dcc5;
+  font-family: var(--serif);
+  font-size: 90px;
+  line-height: 1;
+}
+
+.expect-icon {
+  color: var(--gold);
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.expect-card h3 {
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 13px;
+}
+
+.expect-card p {
+  color: #626a61;
+  font-size: 13px;
+  line-height: 2;
+  margin: 0;
+}
+
+.values-strip {
+  margin-top: 30px;
+  padding: 22px 15px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 26px;
+  color: var(--green);
+  font-family: var(--serif);
+  font-size: 21px;
+}
+
+.values-strip span::before {
+  content: "✦";
+  color: var(--gold);
+  font-size: 10px;
+  vertical-align: 3px;
+  margin-right: 9px;
+}
+
+.contact-section {
+  background: #eeeae0;
+  border-top: 1px solid #e4dece;
+}
+
+.contact-panel {
+  max-width: 760px;
+  margin: auto;
+  background: var(--green);
+  color: var(--paper);
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 1px solid rgba(223,204,157,.15);
+  border-radius: 50%;
+  top: -190px;
+  right: -70px;
+}
+
+.contact-panel .section-kicker { color: var(--gold-light); }
+
+.contact-panel h2 {
+  font-family: var(--serif);
+  font-size: clamp(38px, 5vw, 54px);
+  line-height: 1.05;
+  font-weight: 500;
+  margin: 14px 0;
+}
+
+.contact-panel > p {
+  max-width: 460px;
+  margin: 0 auto;
+  color: rgba(255,253,248,.7);
+  font-size: 13px;
+}
+
+.contact-links {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(223,204,157,.42);
+  color: var(--paper);
+  padding: 12px 15px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+}
+
+.contact-link:hover {
+  background: var(--gold-light);
+  color: var(--green);
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.footer {
+  background: var(--green);
+  color: rgba(255,253,248,.62);
+  border-top: 1px solid rgba(223,204,157,.15);
+  text-align: center;
+  padding: 24px 20px 30px;
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+.footer strong {
+  color: var(--gold-light);
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  padding: 25px;
+  background: rgba(7,20,16,.94);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: min(90vw, 600px);
+  max-height: 84vh;
+  object-fit: contain;
+  border: 1px solid rgba(223,204,157,.6);
+  padding: 6px;
+  background: #f7f1e5;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(255,255,255,.45);
+  color: white;
+  background: transparent;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav {
+    min-height: 63px;
+    padding: 10px 17px;
+  }
+
+  .brand { font-size: 23px; }
+  .brand-mark { width: 31px; height: 31px; }
+
+  .nav-links { gap: 0; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .nav-cta { padding: 9px 12px; font-size: 9px; }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 62px 24px 58px;
+  }
+
+  .hero h1 { font-size: clamp(57px, 13vw, 82px); }
+  .hero-photo-wrap { width: min(85%, 350px); }
+  .hero-photo { height: 390px; }
+  .photo-label { left: -13px; bottom: 28px; }
+
+  .section { padding: 70px 22px; }
+  .about-grid { grid-template-columns: 1fr; gap: 30px; }
+  .about-emblem { min-height: 220px; }
+
+  .details-grid { padding: 70px 20px; }
+  .detail-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .detail-card { padding: 17px 14px; min-height: 96px; }
+  .detail-card .value { font-size: 20px; }
+
+  .globe { height: 330px; }
+  .gallery-card {
+    width: 170px;
+    height: 240px;
+    margin-left: -85px;
+    margin-top: -120px;
+  }
+  .globe::before { width: 270px; height: 270px; }
+
+  .expectations-grid { grid-template-columns: 1fr; gap: 14px; }
+  .expect-card { padding: 29px 24px; }
+  .values-strip { gap: 8px 17px; font-size: 19px; }
+
+  .contact-panel { padding: 39px 21px; }
+  .contact-links { gap: 9px; }
+  .contact-link { padding: 11px 12px; }
+}
+
+@media (max-width: 370px) {
+  .hero-inner { padding-left: 18px; padding-right: 18px; }
+  .hero-photo { height: 340px; }
+  .detail-cards { grid-template-columns: 1fr 1fr; }
+  .detail-card .value { font-size: 18px; }
+  .contact-link { font-size: 10px; padding: 10px; }
+}
+</style>
 </head>
 
 <body>
-  <div class="topbar">A Personal Marriage Profile · Deen &amp; Dunya</div>
 
-  <header class="hero">
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="#home">
+      <span class="brand-mark">J</span>
+      <span>Jinas.</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#details">Profile</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact" class="nav-cta">Get in touch ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
     <div class="hero-inner">
-      <div class="hero-photo-wrap">
-        <img class="hero-photo" src="Photo%201.jpeg" alt="Muhammed Jinas KJ"
-             onerror="this.onerror=null;this.src='Photo%202.jpeg';"
-             onclick="openLightbox(this.src)">
-      </div>
       <div class="hero-copy">
-        <div class="eyebrow">A little introduction</div>
-        <h1>Muhammed<br>Jinas KJ</h1>
-        <p class="hero-subtitle">Data Engineer · Bengaluru, India</p>
-        <div class="gold-line"></div>
-        <p class="hero-note">A simple introduction to my life, values, family-oriented outlook, and hopes for a meaningful partnership.</p>
+        <div class="eyebrow">A personal marriage profile</div>
+        <h1>Muhammed <span>Jinas KJ</span></h1>
+        <p class="hero-subtitle">
+          A life shaped by faith, family, meaningful connections
+          and the joy of discovering new experiences.
+        </p>
+        <div class="hero-rule"></div>
+        <div class="hero-meta">
+          <span>✦ Data Engineer</span>
+          <span>⌖ Bengaluru, India</span>
+          <span>✧ Kerala</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#about">Discover My Story ↘</a>
+          <a class="btn btn-outline" href="#contact">Connect with Me</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <img class="hero-photo"
+             src="Photo%201.jpeg"
+             alt="Portrait of Muhammed Jinas KJ"
+             fetchpriority="high">
+        <div class="photo-label">
+          <small>A little about me</small>
+          <strong>Jinas</strong>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="section white" id="about">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Who I am</div>
-          <h2>About Me</h2>
-          <div class="heading-line"></div>
+  <section class="section reveal" id="about">
+    <div class="section-heading">
+      <div class="section-kicker">A little introduction</div>
+      <h2>More Than a Profile</h2>
+      <p>A glimpse into the values, interests and outlook that shape my life.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-emblem">
+        <div class="emblem-content">
+          <div class="emblem-symbol">J.</div>
+          <p>Faith · Family · Growth</p>
         </div>
-        <p class="about-text">
-          I value family, faith, kindness, and personal growth. I enjoy travelling,
-          exploring new experiences, and making time for the people who matter.
-          I believe a good marriage is built on understanding, mutual respect,
-          honest communication, and growing together through life's different stages.
+      </div>
+      <div class="about-copy">
+        <h3>Assalamu Alaikum.</h3>
+        <p>
+          I value family, faith, kindness, and personal growth. I enjoy
+          travelling, exploring new experiences, and making time for the
+          people who matter. I believe a good marriage is built on
+          understanding, mutual respect, honest communication, and growing
+          together through life's different stages.
         </p>
+        <div class="signature">Warm regards, Jinas</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="details">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">A few things about me</div>
-          <h2>Personal Details</h2>
-          <div class="heading-line"></div>
+  <section class="details-section reveal" id="details">
+    <div class="details-grid">
+      <div class="section-heading">
+        <div class="section-kicker">The essentials</div>
+        <h2>Personal Details</h2>
+        <p>The important details, thoughtfully brought together.</p>
+      </div>
+
+      <div class="detail-cards">
+        <div class="detail-card">
+          <div class="label">Full Name</div>
+          <div class="value">Muhammed Jinas KJ</div>
         </div>
-        <div class="details-grid">
-          <div class="detail"><span>Full Name</span><span>Muhammed Jinas KJ</span></div>
-          <div class="detail"><span>Date of Birth</span><span>23 April 2000</span></div>
-          <div class="detail"><span>Height</span><span>170 cm</span></div>
-          <div class="detail"><span>Religion</span><span>Islam · Sunni Mappila</span></div>
-          <div class="detail"><span>Madhab</span><span>Shafi'i</span></div>
-          <div class="detail"><span>Native Place</span><span>Kalladikode, Kerala</span></div>
-          <div class="detail"><span>Current Location</span><span>Bengaluru, India</span></div>
-          <div class="detail"><span>Education</span><span>B.Tech · Computer Science</span></div>
-          <div class="detail"><span>Profession</span><span>Data Engineer</span></div>
-          <div class="detail"><span>Languages</span><span>English, Hindi, Arabic, Tamil</span></div>
+        <div class="detail-card">
+          <div class="label">Date of Birth</div>
+          <div class="value">23 April 2000</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Height</div>
+          <div class="value">170 cm</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Religion</div>
+          <div class="value">Islam</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Community</div>
+          <div class="value">Sunni Mappila</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Madhab</div>
+          <div class="value">Shafi'i</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Profession</div>
+          <div class="value">Data Engineer</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Work Location</div>
+          <div class="value">Bengaluru</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Native Place</div>
+          <div class="value">Kalladikode, Kerala</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Place of Birth</div>
+          <div class="value">Mannarkkad, Kerala</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Education</div>
+          <div class="value">B.Tech, Computer Science</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">College</div>
+          <div class="value">M E College of Engineering</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">University</div>
+          <div class="value">APJ Abdul Kalam Technological University</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Graduation</div>
+          <div class="value">2021</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">CGPA</div>
+          <div class="value">7.89</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Languages</div>
+          <div class="value">English, Hindi, Arabic, Tamil</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Marital Status</div>
+          <div class="value">Never Married</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Blood Group</div>
+          <div class="value">O Positive</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Father</div>
+          <div class="value">Jaffar</div>
+        </div>
+        <div class="detail-card">
+          <div class="label">Family</div>
+          <div class="value">Business</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section white" id="gallery">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Moments &amp; memories</div>
-          <h2>Photo Gallery</h2>
-          <div class="heading-line"></div>
-          <p class="gallery-intro">A little glimpse into my world.</p>
+  <section class="gallery-section reveal" id="gallery">
+    <div class="section" style="padding-bottom:65px;">
+      <div class="section-heading">
+        <div class="section-kicker">Moments & memories</div>
+        <h2>A Little Gallery</h2>
+        <p>A collection of photographs, presented in a rotating gallery.
+           Swipe, drag or use the arrows to explore.</p>
+      </div>
+
+      <div class="gallery-stage">
+        <div class="globe" id="globe" aria-label="Interactive photo gallery">
+          <div class="gallery-card"><img src="Photo%201.jpeg" alt="Jinas photograph 1" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%202.jpeg" alt="Jinas photograph 2" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%203.jpeg" alt="Jinas photograph 3" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%204.jpeg" alt="Jinas photograph 4" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%205.jpeg" alt="Jinas photograph 5" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%206.jpeg" alt="Jinas photograph 6" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%207.jpeg" alt="Jinas photograph 7" loading="lazy"></div>
+          <div class="gallery-card"><img src="Photo%208.jpeg" alt="Jinas photograph 8" loading="lazy"></div>
         </div>
-        <div class="globe-stage" id="globeStage">
-          <div class="globe" id="globe">
-            <div class="globe-card"><img src="Photo%201.jpeg" alt="Gallery photo 1" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%202.jpeg" alt="Gallery photo 2" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%203.jpeg" alt="Gallery photo 3" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%204.jpeg" alt="Gallery photo 4" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%205.jpeg" alt="Gallery photo 5" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%206.jpeg" alt="Gallery photo 6" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%207.jpeg" alt="Gallery photo 7" draggable="false"></div>
-            <div class="globe-card"><img src="Photo%208.jpeg" alt="Gallery photo 8" draggable="false"></div>
-          </div>
-        </div>
+
         <div class="gallery-controls">
-          <button class="gallery-btn" id="prevPhoto" type="button" aria-label="Rotate left">‹</button>
-          <button class="gallery-btn" id="nextPhoto" type="button" aria-label="Rotate right">›</button>
+          <button class="gallery-arrow" id="prevPhoto" aria-label="Previous photo">←</button>
+          <span class="gallery-count" id="galleryCount">01 / 08</span>
+          <button class="gallery-arrow" id="nextPhoto" aria-label="Next photo">→</button>
         </div>
-        <p class="gallery-hint">Swipe, drag, or use the arrows to rotate · Tap a photo to enlarge</p>
+        <div class="gallery-hint">DRAG OR SWIPE TO EXPLORE · TAP A PHOTO TO ENLARGE</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="expectations">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">What matters to me</div>
-          <h2>Partner Expectations</h2>
-          <div class="heading-line"></div>
-        </div>
-        <div class="expectation-card">
-          <p>
-            I hope to find a kind-hearted, caring, and God-conscious partner
-            with whom I can build a peaceful and supportive life. I value
-            mutual respect, trust, open communication, and a balance between
-            Deen and Dunya. I would love for us to encourage each other's
-            ambitions, respect each other's individuality, and share life's
-            joys and responsibilities as a team.
-          </p>
-        </div>
-      </div>
-    </section>
+  <section class="section reveal" id="expectations">
+    <div class="section-heading">
+      <div class="section-kicker">Looking ahead</div>
+      <h2>What Matters to Me</h2>
+      <p>Building a meaningful partnership through understanding, faith and shared growth.</p>
+    </div>
 
-    <section class="section contact-section" id="contact">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Let's connect</div>
-          <h2>Contact &amp; Social</h2>
-          <div class="heading-line"></div>
-        </div>
-        <p class="contact-description">Feel free to reach out or connect with me through the links below.</p>
+    <div class="expectations-grid">
+      <article class="expect-card">
+        <div class="expect-icon">✧</div>
+        <h3>About Me</h3>
+        <p>
+          I value family, faith, kindness, and personal growth. I enjoy
+          travelling, exploring new experiences, and making time for the
+          people who matter. I believe a good marriage is built on
+          understanding, mutual respect, honest communication, and growing
+          together through life's different stages.
+        </p>
+      </article>
 
-        <div class="contact-grid">
+      <article class="expect-card">
+        <div class="expect-icon">♡</div>
+        <h3>Partner Expectations</h3>
+        <p>
+          I hope to find a kind-hearted, caring, and God-conscious partner
+          with whom I can build a peaceful and supportive life. I value
+          mutual respect, trust, open communication, and a balance between
+          Deen and Dunya. I would love for us to encourage each other's
+          ambitions, respect each other's individuality, and share life's
+          joys and responsibilities as a team.
+        </p>
+      </article>
+    </div>
+
+    <div class="values-strip">
+      <span>Deen & Dunya</span>
+      <span>Mutual Respect</span>
+      <span>Kindness</span>
+      <span>Growing Together</span>
+    </div>
+  </section>
+
+  <section class="contact-section reveal" id="contact">
+    <div class="section">
+      <div class="contact-panel">
+        <div class="section-kicker">Let's connect</div>
+        <h2>A Conversation<br>Begins Here.</h2>
+        <p>
+          For further details or to connect, feel free to reach out
+          through any of the channels below.
+        </p>
+
+        <div class="contact-links">
           <a class="contact-link" href="tel:+918606095470">
-            <span class="contact-icon">☎</span><span>Call: 8606095470</span>
+            <span class="contact-icon">☎</span>
+            <span>Call</span>
           </a>
 
           <a class="contact-link"
              href="https://wa.me/918606095470"
              target="_blank" rel="noopener noreferrer">
-            <span class="contact-icon">◉</span><span>WhatsApp Me</span>
+            <span class="contact-icon">◉</span>
+            <span>WhatsApp</span>
           </a>
 
           <a class="contact-link"
              href="https://www.instagram.com/jinas__m__marhaba/"
-             target="_blank" rel="noopener noreferrer"
-             aria-label="Open Jinas's Instagram profile">
-            <span class="contact-icon">◎</span><span>Instagram</span>
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">◎</span>
+            <span>Instagram</span>
           </a>
 
           <a class="contact-link"
              href="https://www.linkedin.com/in/muhammedjinas-kj/"
              target="_blank" rel="noopener noreferrer">
-            <span class="contact-icon">in</span><span>LinkedIn</span>
+            <span class="contact-icon">in</span>
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
-  <footer class="footer">Made with care · Muhammed Jinas KJ</footer>
+<footer class="footer">
+  <strong>Muhammed Jinas KJ</strong>
+  A PERSONAL PROFILE · MADE WITH CARE
+</footer>
 
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
-    <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close photo">×</button>
-    <img id="lightboxImage" src="" alt="Enlarged gallery photo">
-  </div>
+<div class="lightbox" id="lightbox" role="dialog"
+     aria-modal="true" aria-label="Enlarged photograph">
+  <button class="lightbox-close" id="closeLightbox" aria-label="Close photo">×</button>
+  <img id="lightboxImage" src="" alt="Enlarged photograph">
+</div>
 
-  <script>
-    const stage = document.getElementById("globeStage");
-    const cards = Array.from(document.querySelectorAll(".globe-card"));
-    const total = cards.length;
-    let rotation = 0;
-    let startX = 0;
-    let lastX = 0;
-    let dragging = false;
-    let moved = false;
+<script>
+(function () {
+  const globe = document.getElementById("globe");
+  const cards = Array.from(document.querySelectorAll(".gallery-card"));
+  const count = document.getElementById("galleryCount");
+  const prev = document.getElementById("prevPhoto");
+  const next = document.getElementById("nextPhoto");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const closeLightbox = document.getElementById("closeLightbox");
 
-    function arrangeGlobe() {
-      const radius = window.innerWidth <= 650 ? 175 : 245;
-      cards.forEach((card, index) => {
-        const angle = (360 / total) * index + rotation;
-        card.style.transform = "rotateY(" + angle + "deg) translateZ(" + radius + "px)";
-      });
-    }
+  if (!globe || cards.length === 0) return;
 
-    function rotateGallery(direction) {
-      rotation += direction * (360 / total);
-      arrangeGlobe();
-    }
+  let activeIndex = 0;
+  let startX = 0;
+  let dragging = false;
+  let moved = false;
+  let dragOffset = 0;
 
-    document.getElementById("prevPhoto").addEventListener("click", () => rotateGallery(1));
-    document.getElementById("nextPhoto").addEventListener("click", () => rotateGallery(-1));
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-    stage.addEventListener("pointerdown", event => {
-      dragging = true;
-      moved = false;
-      startX = lastX = event.clientX;
-      stage.setPointerCapture(event.pointerId);
+  function renderGallery() {
+    const width = globe.clientWidth;
+    const mobile = width < 600;
+    const spacing = mobile ? Math.min(width * 0.48, 185) : 225;
+    const cardWidth = mobile ? 170 : 205;
+
+    cards.forEach((card, index) => {
+      let offset = index - activeIndex;
+      const half = cards.length / 2;
+
+      if (offset > half) offset -= cards.length;
+      if (offset < -half) offset += cards.length;
+
+      const x = offset * spacing + dragOffset;
+      const abs = Math.abs(offset);
+      const scale = offset === 0 ? 1 : Math.max(.70, 1 - abs * .105);
+      const rotate = offset * (mobile ? -8 : -10);
+      const opacity = abs > 2.7 ? 0 : Math.max(.28, 1 - abs * .25);
+      const z = 20 - Math.round(abs);
+
+      card.style.zIndex = z;
+      card.style.opacity = opacity;
+      card.style.filter = offset === 0 ? "none" : "brightness(.75)";
+      card.style.transform =
+        "translate3d(" + x + "px,0,0) rotateY(" + rotate +
+        "deg) scale(" + scale + ")";
+
+      card.style.pointerEvents = abs <= 1.5 ? "auto" : "none";
+      card.setAttribute("aria-label", "Open photo " + (index + 1));
     });
 
-    stage.addEventListener("pointermove", event => {
-      if (!dragging) return;
-      const delta = event.clientX - lastX;
-      if (Math.abs(event.clientX - startX) > 5) moved = true;
-      rotation += delta * 0.45;
-      lastX = event.clientX;
-      arrangeGlobe();
+    count.textContent =
+      String(activeIndex + 1).padStart(2, "0") + " / " +
+      String(cards.length).padStart(2, "0");
+  }
+
+  function goTo(index) {
+    activeIndex = (index + cards.length) % cards.length;
+    dragOffset = 0;
+    renderGallery();
+  }
+
+  prev.addEventListener("click", () => goTo(activeIndex - 1));
+  next.addEventListener("click", () => goTo(activeIndex + 1));
+
+  globe.addEventListener("pointerdown", function (event) {
+    if (event.target.closest("button")) return;
+    dragging = true;
+    moved = false;
+    startX = event.clientX;
+    dragOffset = 0;
+    globe.setPointerCapture(event.pointerId);
+  });
+
+  globe.addEventListener("pointermove", function (event) {
+    if (!dragging) return;
+    const delta = event.clientX - startX;
+
+    if (Math.abs(delta) > 5) moved = true;
+    dragOffset = delta * .75;
+    renderGallery();
+  });
+
+  function finishDrag() {
+    if (!dragging) return;
+    dragging = false;
+
+    const threshold = Math.max(35, globe.clientWidth * .09);
+
+    if (Math.abs(dragOffset) > threshold) {
+      goTo(activeIndex + (dragOffset < 0 ? 1 : -1));
+    } else {
+      dragOffset = 0;
+      renderGallery();
+    }
+
+    setTimeout(() => { moved = false; }, 80);
+  }
+
+  globe.addEventListener("pointerup", finishDrag);
+  globe.addEventListener("pointercancel", finishDrag);
+  globe.addEventListener("lostpointercapture", finishDrag);
+
+  cards.forEach((card, index) => {
+    card.addEventListener("click", function () {
+      if (moved) return;
+
+      if (index !== activeIndex) {
+        goTo(index);
+        return;
+      }
+
+      const img = card.querySelector("img");
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt;
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+      closeLightbox.focus();
     });
+  });
 
-    function stopDragging() { dragging = false; }
-    stage.addEventListener("pointerup", stopDragging);
-    stage.addEventListener("pointercancel", stopDragging);
-    stage.addEventListener("lostpointercapture", stopDragging);
+  function closeViewer() {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+    lightboxImage.src = "";
+  }
 
-    cards.forEach(card => {
-      card.addEventListener("click", () => {
-        if (moved) {
-          moved = false;
-          return;
+  closeLightbox.addEventListener("click", closeViewer);
+
+  lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) closeViewer();
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeViewer();
+    if (lightbox.classList.contains("open")) {
+      if (event.key === "ArrowRight") {
+        lightboxImage.src =
+          cards[(activeIndex + 1) % cards.length].querySelector("img").src;
+        activeIndex = (activeIndex + 1) % cards.length;
+        renderGallery();
+      }
+      if (event.key === "ArrowLeft") {
+        activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+        lightboxImage.src = cards[activeIndex].querySelector("img").src;
+        renderGallery();
+      }
+    } else {
+      if (event.key === "ArrowRight") goTo(activeIndex + 1);
+      if (event.key === "ArrowLeft") goTo(activeIndex - 1);
+    }
+  });
+
+  window.addEventListener("resize", renderGallery);
+  renderGallery();
+
+  const revealItems = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window && !reducedMotion) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
-        const img = card.querySelector("img");
-        if (img) openLightbox(img.src);
       });
-    });
+    }, { threshold: 0.08 });
 
-    function openLightbox(src) {
-      document.getElementById("lightboxImage").src = src;
-      document.getElementById("lightbox").classList.add("open");
-    }
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add("visible"));
+  }
+})();
+</script>
 
-    function closeLightbox() {
-      document.getElementById("lightbox").classList.remove("open");
-      document.getElementById("lightboxImage").src = "";
-    }
-
-    document.getElementById("closeLightbox").addEventListener("click", closeLightbox);
-
-    document.getElementById("lightbox").addEventListener("click", event => {
-      if (event.target.id === "lightbox") closeLightbox();
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") closeLightbox();
-      if (event.key === "ArrowLeft") rotateGallery(1);
-      if (event.key === "ArrowRight") rotateGallery(-1);
-    });
-
-    window.addEventListener("resize", arrangeGlobe);
-    arrangeGlobe();
-  </script>
 </body>
 </html>
