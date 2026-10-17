@@ -11,7 +11,6 @@
   <style>
     :root {
       --green: #173d32;
-      --green-light: #245746;
       --cream: #f8f5ed;
       --paper: #fffdf8;
       --gold: #c8a45d;
@@ -20,15 +19,9 @@
       --border: #e8e0d1;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Georgia, "Times New Roman", serif;
@@ -37,14 +30,8 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
 
     .topbar {
       background: var(--green);
@@ -97,9 +84,7 @@
       cursor: pointer;
     }
 
-    .hero-copy {
-      text-align: left;
-    }
+    .hero-copy { text-align: left; }
 
     .eyebrow {
       color: #9b7a3e;
@@ -137,27 +122,16 @@
       color: #59645b;
     }
 
-    .section {
-      padding: 72px 20px;
-    }
-
-    .section.white {
-      background: var(--paper);
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-    }
+    .section { padding: 72px 20px; }
+    .section.white { background: var(--paper); }
+    .container { max-width: 900px; margin: auto; }
 
     .section-heading {
       text-align: center;
       margin-bottom: 35px;
     }
 
-    .section-heading .eyebrow {
-      margin-bottom: 8px;
-    }
+    .section-heading .eyebrow { margin-bottom: 8px; }
 
     h2 {
       color: var(--green);
@@ -200,9 +174,7 @@
       font-size: 14px;
     }
 
-    .detail span:first-child {
-      color: var(--muted);
-    }
+    .detail span:first-child { color: var(--muted); }
 
     .detail span:last-child {
       color: var(--green);
@@ -229,9 +201,7 @@
       user-select: none;
     }
 
-    .globe-stage:active {
-      cursor: grabbing;
-    }
+    .globe-stage:active { cursor: grabbing; }
 
     .globe {
       position: absolute;
@@ -313,18 +283,9 @@
       line-height: 2;
     }
 
-    .contact-section {
-      background: var(--green);
-      color: white;
-    }
-
-    .contact-section h2 {
-      color: white;
-    }
-
-    .contact-section .eyebrow {
-      color: #e0c17d;
-    }
+    .contact-section { background: var(--green); color: white; }
+    .contact-section h2 { color: white; }
+    .contact-section .eyebrow { color: #e0c17d; }
 
     .contact-description {
       text-align: center;
@@ -391,9 +352,7 @@
       padding: 20px;
     }
 
-    .lightbox.open {
-      display: flex;
-    }
+    .lightbox.open { display: flex; }
 
     .lightbox img {
       max-width: 92vw;
@@ -418,60 +377,30 @@
     }
 
     @media (max-width: 650px) {
-      .topbar {
-        font-size: 10px;
-        letter-spacing: 1.5px;
-      }
-
-      .hero {
-        padding: 35px 20px 45px;
-      }
+      .topbar { font-size: 10px; letter-spacing: 1.5px; }
+      .hero { padding: 35px 20px 45px; }
 
       .hero-inner {
         grid-template-columns: 1fr;
         gap: 28px;
       }
 
-      .hero-photo-wrap {
-        max-width: 270px;
-      }
+      .hero-photo-wrap { max-width: 270px; }
+      .hero-photo { height: 320px; }
+      .hero-copy { text-align: center; }
 
-      .hero-photo {
-        height: 320px;
-      }
-
-      .hero-copy {
-        text-align: center;
-      }
-
-      .hero-copy .gold-line {
-        margin: 18px auto;
-      }
-
-      .hero-note {
-        margin: auto;
-      }
-
-      .section {
-        padding: 55px 18px;
-      }
+      .hero-copy .gold-line { margin: 18px auto; }
+      .hero-note { margin: auto; }
+      .section { padding: 55px 18px; }
 
       .about-text {
         font-size: 16px;
         text-align: left;
       }
 
-      .details-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .detail {
-        font-size: 14px;
-      }
-
-      .globe-stage {
-        height: 330px;
-      }
+      .details-grid { grid-template-columns: 1fr; }
+      .detail { font-size: 14px; }
+      .globe-stage { height: 330px; }
 
       .globe-card {
         width: 145px;
@@ -480,24 +409,18 @@
         top: -100px;
       }
 
-      .expectation-card {
-        padding: 24px 20px;
-      }
+      .expectation-card { padding: 24px 20px; }
 
       .expectation-card p {
         font-size: 16px;
         text-align: left;
       }
 
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+      .contact-grid { grid-template-columns: 1fr; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
@@ -649,7 +572,7 @@
           </a>
 
           <a class="contact-link"
-             href="https://www.instagram.com/jinasmarhaba/"
+             href="https://www.instagram.com/jinas__m__marhaba/"
              target="_blank" rel="noopener noreferrer">
             <span class="contact-icon">◎</span>
             <span>Instagram</span>
@@ -739,9 +662,8 @@
     stage.addEventListener("lostpointercapture", stopDragging);
 
     cards.forEach(function (card) {
-      card.addEventListener("click", function (event) {
+      card.addEventListener("click", function () {
         if (moved) {
-          event.preventDefault();
           moved = false;
           return;
         }
@@ -752,9 +674,8 @@
     });
 
     function openLightbox(src) {
-      const lightbox = document.getElementById("lightbox");
       document.getElementById("lightboxImage").src = src;
-      lightbox.classList.add("open");
+      document.getElementById("lightbox").classList.add("open");
     }
 
     function closeLightbox() {
@@ -775,7 +696,6 @@
     });
 
     window.addEventListener("resize", arrangeGlobe);
-
     arrangeGlobe();
   </script>
 </body>
