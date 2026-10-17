@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f7f3ec">
 <title>Muhammed Jinas KJ | Marriage Profile</title>
-<meta name="description" content="Get to know Muhammed Jinas KJ through his personal marriage profile.">
+<meta name="description" content="Marriage profile of Muhammed Jinas KJ.">
 
 <style>
 :root {
@@ -41,7 +41,7 @@ header {
   gap: 15px;
 }
 .brand { font-size: 19px; font-weight: bold; letter-spacing: 2px; }
-.nav-links { display: flex; gap: 20px; font-size: 12px; }
+.nav-links { display: flex; gap: 17px; font-size: 12px; }
 .nav-links a:hover { color: var(--gold); }
 
 .hero {
@@ -125,6 +125,7 @@ h2 { margin: 5px 0 20px; font-size: clamp(28px, 4vw, 39px); font-weight: normal;
 }
 .detail strong { font-weight: normal; font-size: 15px; }
 
+/* 3D Globe Gallery */
 .gallery-section { overflow: hidden; }
 .gallery-intro { color: var(--muted); font-size: 14px; }
 .globe-stage {
@@ -206,6 +207,7 @@ h2 { margin: 5px 0 20px; font-size: clamp(28px, 4vw, 39px); font-weight: normal;
   font: 11px Arial, sans-serif;
   margin-top: 14px;
 }
+
 .expectations {
   background: var(--paper);
   border: 1px solid var(--line);
@@ -232,6 +234,7 @@ h2 { margin: 5px 0 20px; font-size: clamp(28px, 4vw, 39px); font-weight: normal;
   transition: .2s ease;
 }
 .contact-link:hover { transform: translateY(-2px); border-color: var(--gold); }
+
 footer {
   margin-top: 35px;
   padding: 30px 0;
@@ -284,7 +287,7 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .nav-links { gap: 12px; font-size: 11px; }
+  .nav-links { gap: 10px; font-size: 10px; }
   .hero {
     grid-template-columns: 1fr;
     gap: 27px;
@@ -379,7 +382,7 @@ footer {
     <div class="container">
       <div class="section-label">Moments & memories</div>
       <h2>My Photo Gallery</h2>
-      <p class="gallery-intro">A little collection of moments. Swipe or drag to rotate the globe.</p>
+      <p class="gallery-intro">Swipe or drag to rotate the globe. Tap a photo to enlarge it.</p>
 
       <div class="globe-stage" id="globeStage" aria-label="Interactive rotating photo gallery">
         <div class="globe" id="photoGlobe">
@@ -422,11 +425,16 @@ footer {
       <h2>Contact & Social</h2>
       <p class="intro">Feel free to connect through the links below.</p>
       <div class="contact-grid">
-        <!-- Replace the placeholder values with your real contact details. -->
-        <a class="contact-link" id="phoneLink" href="tel:">☎ Phone</a>
-        <a class="contact-link" id="whatsappLink" href="https://wa.me/" target="_blank" rel="noopener">◉ WhatsApp</a>
-        <a class="contact-link" href="https://www.instagram.com/jinasmarhaba/" target="_blank" rel="noopener">◎ Instagram</a>
-        <a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">in LinkedIn</a>
+        <a class="contact-link" href="tel:+918606095470">☎ Call Me</a>
+        <a class="contact-link"
+           href="https://wa.me/918606095470"
+           target="_blank" rel="noopener noreferrer">◉ WhatsApp</a>
+        <a class="contact-link"
+           href="https://www.instagram.com/jinasmarhaba/"
+           target="_blank" rel="noopener noreferrer">◎ Instagram</a>
+        <a class="contact-link"
+           href="https://www.linkedin.com/in/muhammedjinas-kj/?isSelfProfile=true"
+           target="_blank" rel="noopener noreferrer">in LinkedIn</a>
       </div>
     </div>
   </section>
@@ -448,7 +456,7 @@ footer {
 </div>
 
 <script>
-/* Photo globe */
+/* Interactive 3D photo globe */
 const globe = document.getElementById("photoGlobe");
 const globeStage = document.getElementById("globeStage");
 const globeCards = Array.from(document.querySelectorAll(".globe-card"));
