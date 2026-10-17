@@ -51,8 +51,6 @@ img { max-width: 100%; }
   color: var(--ink);
 }
 
-/* NAVIGATION */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -99,8 +97,6 @@ img { max-width: 100%; }
   border-radius: 30px;
   padding: 12px 19px;
 }
-
-/* INTRO */
 
 .intro {
   max-width: 1320px;
@@ -183,17 +179,8 @@ img { max-width: 100%; }
 
 .pill-button:hover { transform: translateY(-2px); }
 
-.pill-dark {
-  color: white;
-  background: var(--ink);
-}
-
-.pill-light {
-  background: #e9e5d9;
-  color: var(--ink);
-}
-
-/* PINTEREST-INSPIRED COLLAGE */
+.pill-dark { color: white; background: var(--ink); }
+.pill-light { background: #e9e5d9; color: var(--ink); }
 
 .hero-collage {
   display: grid;
@@ -249,8 +236,6 @@ img { max-width: 100%; }
   color: #4c4d40;
 }
 
-/* GENERAL SECTIONS */
-
 .section {
   max-width: 1240px;
   margin: auto;
@@ -289,11 +274,7 @@ img { max-width: 100%; }
   line-height: 1.8;
 }
 
-/* STORY */
-
-.story-section {
-  border-top: 1px solid var(--line);
-}
+.story-section { border-top: 1px solid var(--line); }
 
 .story-grid {
   display: grid;
@@ -354,8 +335,6 @@ img { max-width: 100%; }
   max-width: 680px;
 }
 
-/* PROFILE DETAILS */
-
 .profile-section {
   background: #efede4;
   border-top: 1px solid #e5e1d5;
@@ -410,8 +389,6 @@ img { max-width: 100%; }
   font-size: 11px;
   margin-top: 22px;
 }
-
-/* PHOTO WALL */
 
 .gallery-section { overflow: hidden; }
 
@@ -473,11 +450,7 @@ img { max-width: 100%; }
 
 .photo-caption span:last-child { color: var(--rust); }
 
-/* EXPECTATIONS */
-
-.expect-section {
-  background: #e9e5d9;
-}
+.expect-section { background: #e9e5d9; }
 
 .expect-inner {
   max-width: 1240px;
@@ -533,8 +506,6 @@ img { max-width: 100%; }
   border-radius: 30px;
   font-size: 10px;
 }
-
-/* CONTACT */
 
 .contact-section {
   padding: 76px 34px 90px;
@@ -625,8 +596,6 @@ footer strong {
   margin-bottom: 7px;
 }
 
-/* PHOTO VIEWER */
-
 .viewer {
   position: fixed;
   inset: 0;
@@ -650,9 +619,7 @@ footer strong {
   border-radius: 4px;
 }
 
-.viewer-close,
-.viewer-prev,
-.viewer-next {
+.viewer-close, .viewer-prev, .viewer-next {
   position: absolute;
   display: grid;
   place-items: center;
@@ -669,8 +636,6 @@ footer strong {
 .viewer-close { top: 22px; right: 22px; }
 .viewer-prev { left: 20px; top: 50%; }
 .viewer-next { right: 20px; top: 50%; }
-
-/* MOTION */
 
 .fade-up {
   opacity: 0;
@@ -689,8 +654,6 @@ footer strong {
     transition-duration: .01ms !important;
   }
 }
-
-/* TABLET */
 
 @media (max-width: 900px) {
   .nav-inner { padding-inline: 22px; }
@@ -712,14 +675,8 @@ footer strong {
   .contact-actions { min-width: 230px; }
 }
 
-/* MOBILE */
-
 @media (max-width: 620px) {
-  .nav-inner {
-    min-height: 65px;
-    padding: 10px 18px;
-  }
-
+  .nav-inner { min-height: 65px; padding: 10px 18px; }
   .logo { font-size: 25px; }
   .nav-links { gap: 0; }
   .nav-links a:not(.nav-button) { display: none; }
@@ -780,6 +737,7 @@ footer strong {
   .contact-box h2 { font-size: 44px; }
   .contact-actions { min-width: 0; }
   .social { padding: 12px 10px; font-size: 10px; }
+
   .viewer { padding: 16px; }
   .viewer-prev { left: 8px; }
   .viewer-next { right: 8px; }
@@ -817,7 +775,6 @@ footer strong {
     <div class="intro-grid">
       <div class="intro-copy">
         <h1>Muhammed <em>Jinas KJ.</em></h1>
-
         <p class="intro-description">
           A little space to share who I am, what I value, and the kind
           of meaningful partnership I hope to build.
@@ -879,7 +836,6 @@ footer strong {
           <h3>A life built on faith, family and growing together.</h3>
           <small>My outlook on life</small>
         </div>
-
         <div class="story-copy">
           <h3>Assalamu Alaikum.</h3>
           <p>
@@ -907,87 +863,31 @@ footer strong {
       </div>
 
       <div class="profile-grid">
-        <article class="info-card">
-          <div class="info-label">Full Name</div>
-          <div class="info-value">Muhammed Jinas KJ</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Date of Birth</div>
-          <div class="info-value">23 April 2000</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Height</div>
-          <div class="info-value">170 cm</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Religion</div>
-          <div class="info-value">Islam</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Community</div>
-          <div class="info-value">Sunni Mappila</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Madhab</div>
-          <div class="info-value">Shafi'i</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Profession</div>
-          <div class="info-value">Data Engineer</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Current Location</div>
-          <div class="info-value">Bengaluru</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Native Place</div>
-          <div class="info-value">Kalladikode, Kerala</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Place of Birth</div>
-          <div class="info-value">Mannarkkad, Kerala</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Education</div>
-          <div class="info-value">B.Tech Computer Science</div>
-        </article>
+        <article class="info-card"><div class="info-label">Full Name</div><div class="info-value">Muhammed Jinas KJ</div></article>
+        <article class="info-card"><div class="info-label">Date of Birth</div><div class="info-value">23 April 2000</div></article>
+        <article class="info-card"><div class="info-label">Height</div><div class="info-value">170 cm</div></article>
+        <article class="info-card"><div class="info-label">Religion</div><div class="info-value">Islam</div></article>
+        <article class="info-card"><div class="info-label">Community</div><div class="info-value">Sunni Mappila</div></article>
+        <article class="info-card"><div class="info-label">Madhab</div><div class="info-value">Shafi'i</div></article>
+        <article class="info-card"><div class="info-label">Profession</div><div class="info-value">Data Engineer</div></article>
+        <article class="info-card"><div class="info-label">Current Location</div><div class="info-value">Bengaluru</div></article>
+        <article class="info-card"><div class="info-label">Native Place</div><div class="info-value">Kalladikode, Kerala</div></article>
+        <article class="info-card"><div class="info-label">Place of Birth</div><div class="info-value">Mannarkkad, Kerala</div></article>
+        <article class="info-card"><div class="info-label">Education</div><div class="info-value">B.Tech Computer Science</div></article>
         <article class="info-card">
           <div class="info-label">College</div>
-          <div class="info-value">M E College of Engineering</div>
+          <div class="info-value">Ammini College of Engineering, Mankara, Palakkad</div>
         </article>
-        <article class="info-card">
-          <div class="info-label">University</div>
-          <div class="info-value">APJ Abdul Kalam Technological University</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Graduation Year</div>
-          <div class="info-value">2021</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">CGPA</div>
-          <div class="info-value">7.89</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Languages</div>
-          <div class="info-value">English, Hindi, Arabic, Tamil</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Marital Status</div>
-          <div class="info-value">Never Married</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Blood Group</div>
-          <div class="info-value">O Positive</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Father's Name</div>
-          <div class="info-value">Jaffar</div>
-        </article>
-        <article class="info-card">
-          <div class="info-label">Family Occupation</div>
-          <div class="info-value">Business</div>
-        </article>
+        <article class="info-card"><div class="info-label">University</div><div class="info-value">APJ Abdul Kalam Technological University</div></article>
+        <article class="info-card"><div class="info-label">Graduation Year</div><div class="info-value">2021</div></article>
+        <article class="info-card"><div class="info-label">CGPA</div><div class="info-value">7.89</div></article>
+        <article class="info-card"><div class="info-label">Languages</div><div class="info-value">English, Hindi, Arabic, Tamil</div></article>
+        <article class="info-card"><div class="info-label">Marital Status</div><div class="info-value">Never Married</div></article>
+        <article class="info-card"><div class="info-label">Blood Group</div><div class="info-value">O Positive</div></article>
+        <article class="info-card"><div class="info-label">Father's Name</div><div class="info-value">Jaffar</div></article>
+        <article class="info-card"><div class="info-label">Family Occupation</div><div class="info-value">Business</div></article>
       </div>
+
       <p class="profile-footnote">
         A simple overview of my personal and educational background.
       </p>
@@ -1012,38 +912,14 @@ footer strong {
       </p>
 
       <div class="photo-wall">
-        <div class="photo-card photo-open" data-photo="1">
-          <img src="Photo%201.jpeg" alt="Jinas photograph 1" loading="lazy">
-          <div class="photo-caption"><span>A little about me</span><span>01 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="2">
-          <img src="Photo%202.jpeg" alt="Jinas photograph 2" loading="lazy">
-          <div class="photo-caption"><span>Everyday moments</span><span>02 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="3">
-          <img src="Photo%203.jpeg" alt="Jinas photograph 3" loading="lazy">
-          <div class="photo-caption"><span>My story</span><span>03 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="4">
-          <img src="Photo%204.jpeg" alt="Jinas photograph 4" loading="lazy">
-          <div class="photo-caption"><span>Little memories</span><span>04 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="5">
-          <img src="Photo%205.jpeg" alt="Jinas photograph 5" loading="lazy">
-          <div class="photo-caption"><span>Moments to remember</span><span>05 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="6">
-          <img src="Photo%206.jpeg" alt="Jinas photograph 6" loading="lazy">
-          <div class="photo-caption"><span>Life lately</span><span>06 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="7">
-          <img src="Photo%207.jpeg" alt="Jinas photograph 7" loading="lazy">
-          <div class="photo-caption"><span>Another chapter</span><span>07 ↗</span></div>
-        </div>
-        <div class="photo-card photo-open" data-photo="8">
-          <img src="Photo%208.jpeg" alt="Jinas photograph 8" loading="lazy">
-          <div class="photo-caption"><span>More to the story</span><span>08 ↗</span></div>
-        </div>
+        <div class="photo-card photo-open" data-photo="1"><img src="Photo%201.jpeg" alt="Jinas photograph 1" loading="lazy"><div class="photo-caption"><span>A little about me</span><span>01 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="2"><img src="Photo%202.jpeg" alt="Jinas photograph 2" loading="lazy"><div class="photo-caption"><span>Everyday moments</span><span>02 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="3"><img src="Photo%203.jpeg" alt="Jinas photograph 3" loading="lazy"><div class="photo-caption"><span>My story</span><span>03 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="4"><img src="Photo%204.jpeg" alt="Jinas photograph 4" loading="lazy"><div class="photo-caption"><span>Little memories</span><span>04 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="5"><img src="Photo%205.jpeg" alt="Jinas photograph 5" loading="lazy"><div class="photo-caption"><span>Moments to remember</span><span>05 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="6"><img src="Photo%206.jpeg" alt="Jinas photograph 6" loading="lazy"><div class="photo-caption"><span>Life lately</span><span>06 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="7"><img src="Photo%207.jpeg" alt="Jinas photograph 7" loading="lazy"><div class="photo-caption"><span>Another chapter</span><span>07 ↗</span></div></div>
+        <div class="photo-card photo-open" data-photo="8"><img src="Photo%208.jpeg" alt="Jinas photograph 8" loading="lazy"><div class="photo-caption"><span>More to the story</span><span>08 ↗</span></div></div>
       </div>
     </div>
   </section>
@@ -1071,12 +947,7 @@ footer strong {
             understanding, mutual respect, honest communication, and growing
             together through life's different stages.
           </p>
-          <div class="values">
-            <span>Family</span>
-            <span>Faith</span>
-            <span>Kindness</span>
-            <span>Personal Growth</span>
-          </div>
+          <div class="values"><span>Family</span><span>Faith</span><span>Kindness</span><span>Personal Growth</span></div>
         </article>
 
         <article class="expect-card">
@@ -1090,12 +961,7 @@ footer strong {
             ambitions, respect each other's individuality, and share life's
             joys and responsibilities as a team.
           </p>
-          <div class="values">
-            <span>Deen & Dunya</span>
-            <span>Trust</span>
-            <span>Mutual Respect</span>
-            <span>Growing Together</span>
-          </div>
+          <div class="values"><span>Deen & Dunya</span><span>Trust</span><span>Mutual Respect</span><span>Growing Together</span></div>
         </article>
       </div>
     </div>
@@ -1113,21 +979,10 @@ footer strong {
       </div>
 
       <div class="contact-actions">
-        <a class="social" href="tel:+918606095470">
-          <span class="social-icon">☎</span> Call
-        </a>
-        <a class="social" href="https://wa.me/918606095470"
-           target="_blank" rel="noopener noreferrer">
-          <span class="social-icon">◉</span> WhatsApp
-        </a>
-        <a class="social" href="https://www.instagram.com/jinas__m__marhaba/"
-           target="_blank" rel="noopener noreferrer">
-          <span class="social-icon">◎</span> Instagram
-        </a>
-        <a class="social" href="https://www.linkedin.com/in/muhammedjinas-kj/"
-           target="_blank" rel="noopener noreferrer">
-          <span class="social-icon">in</span> LinkedIn
-        </a>
+        <a class="social" href="tel:+918606095470"><span class="social-icon">☎</span> Call</a>
+        <a class="social" href="https://wa.me/918606095470" target="_blank" rel="noopener noreferrer"><span class="social-icon">◉</span> WhatsApp</a>
+        <a class="social" href="https://www.instagram.com/jinas__m__marhaba/" target="_blank" rel="noopener noreferrer"><span class="social-icon">◎</span> Instagram</a>
+        <a class="social" href="https://www.linkedin.com/in/muhammedjinas-kj/" target="_blank" rel="noopener noreferrer"><span class="social-icon">in</span> LinkedIn</a>
       </div>
     </div>
   </section>
@@ -1139,8 +994,7 @@ footer strong {
   A PERSONAL STORY · SHARED WITH CARE
 </footer>
 
-<div class="viewer" id="viewer" role="dialog"
-     aria-modal="true" aria-label="Photo viewer">
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Photo viewer">
   <button class="viewer-close" id="viewerClose" aria-label="Close">×</button>
   <button class="viewer-prev" id="viewerPrev" aria-label="Previous photo">‹</button>
   <img id="viewerImage" src="" alt="Expanded photo">
@@ -1185,8 +1039,7 @@ footer strong {
 
   document.querySelectorAll(".photo-open").forEach(function (card) {
     card.addEventListener("click", function () {
-      const index = Number(card.dataset.photo || "1") - 1;
-      openViewer(index);
+      openViewer(Number(card.dataset.photo || "1") - 1);
     });
 
     card.setAttribute("tabindex", "0");
