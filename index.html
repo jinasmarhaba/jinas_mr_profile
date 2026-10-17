@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f8f5ed">
 <title>Muhammed Jinas KJ | Marriage Profile</title>
-<meta name="description" content="Marriage profile of Muhammed Jinas KJ.">
+<meta name="description" content="Marriage profile of Muhammed Jinas KJ">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,452 +14,164 @@
 
 <style>
 :root {
-  --bg: #f8f5ed;
-  --paper: #fffdf8;
-  --ink: #292d21;
-  --muted: #77786c;
-  --olive: #65704b;
-  --olive-light: #e8eadf;
-  --rust: #a85f43;
-  --line: #e6e0d4;
-  --radius: 22px;
+  --bg:#f8f5ed;
+  --paper:#fffdf8;
+  --ink:#292d21;
+  --muted:#77786c;
+  --olive:#65704b;
+  --olive-light:#e8eadf;
+  --rust:#a85f43;
+  --line:#e6e0d4;
 }
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'DM Sans', sans-serif;
-  line-height: 1.65;
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.65;
 }
-
-a { color: inherit; }
-
-img { display: block; max-width: 100%; }
-
-.container {
-  width: min(1120px, 91%);
-  margin: auto;
-}
-
-header {
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
-}
-
+a { color:inherit; }
+img { display:block; max-width:100%; }
+.container { width:min(1120px,91%); margin:auto; }
+header { padding:22px 0; border-bottom:1px solid var(--line); }
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  display:flex; justify-content:space-between;
+  align-items:center; gap:20px;
 }
-
 .brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  font-weight: 700;
-  text-decoration: none;
+  font-family:'Playfair Display',serif;
+  font-size:23px; font-weight:700; text-decoration:none;
 }
-
-.nav-links {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.nav-links a:hover { color: var(--rust); }
+.nav-links { display:flex; gap:18px; flex-wrap:wrap; }
+.nav-links a { text-decoration:none; font-size:13px; color:var(--muted); }
+.nav-links a:hover { color:var(--rust); }
 
 .hero {
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  align-items: center;
-  gap: 55px;
-  padding-top: 65px;
-  padding-bottom: 65px;
+  display:grid; grid-template-columns:1.05fr .95fr;
+  align-items:center; gap:55px; padding-top:65px; padding-bottom:65px;
 }
-
 .eyebrow {
-  color: var(--rust);
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-size: 11px;
-  font-weight: 700;
+  color:var(--rust); text-transform:uppercase;
+  letter-spacing:2.5px; font-size:11px; font-weight:700;
 }
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: clamp(42px, 6vw, 70px);
-  margin: 15px 0;
-  letter-spacing: -1.5px;
-}
-
-h1 span { color: var(--olive); }
-
-.hero-description {
-  color: var(--muted);
-  max-width: 470px;
-  font-size: 15px;
-}
-
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin: 22px 0;
-}
-
-.pill {
-  background: var(--olive-light);
-  color: var(--olive);
-  padding: 7px 13px;
-  border-radius: 30px;
-  font-size: 12px;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 25px;
-}
-
+h1,h2,h3 { font-family:'Playfair Display',serif; font-weight:500; line-height:1.2; }
+h1 { font-size:clamp(42px,6vw,70px); margin:15px 0; letter-spacing:-1.5px; }
+h1 span { color:var(--olive); }
+.hero-description { color:var(--muted); max-width:470px; font-size:15px; }
+.pills,.actions { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0; }
+.pill { background:var(--olive-light); color:var(--olive); padding:7px 13px; border-radius:30px; font-size:12px; }
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  padding: 12px 19px;
-  border-radius: 30px;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid var(--olive);
-  transition: .2s ease;
+  display:inline-flex; align-items:center; justify-content:center;
+  text-decoration:none; padding:12px 19px; border-radius:30px;
+  font-size:13px; font-weight:600; border:1px solid var(--olive);
 }
-
-.btn-primary {
-  background: var(--olive);
-  color: white;
-}
-
-.btn-secondary { color: var(--olive); }
-
-.btn:hover { transform: translateY(-2px); }
-
-.hero-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 13px;
-  align-items: center;
-}
-
+.btn-primary { background:var(--olive); color:white; }
+.btn-secondary { color:var(--olive); }
+.hero-gallery { display:grid; grid-template-columns:1fr 1fr; gap:13px; align-items:center; }
 .hero-gallery img {
-  width: 100%;
-  height: 245px;
-  object-fit: cover;
-  border-radius: 100px 100px 18px 18px;
-  background: var(--olive-light);
-  cursor: pointer;
+  width:100%; height:245px; object-fit:cover;
+  border-radius:100px 100px 18px 18px;
+  background:var(--olive-light); cursor:pointer;
 }
+.hero-gallery img:nth-child(2) { margin-top:45px; border-radius:18px 18px 100px 100px; }
+.hero-gallery img:nth-child(3) { margin-top:-35px; border-radius:18px 100px 18px 18px; }
+.hero-gallery img:nth-child(4) { margin-top:10px; border-radius:100px 18px 18px 18px; }
 
-.hero-gallery img:nth-child(2) {
-  margin-top: 45px;
-  border-radius: 18px 18px 100px 100px;
-}
-
-.hero-gallery img:nth-child(3) {
-  margin-top: -35px;
-  border-radius: 18px 100px 18px 18px;
-}
-
-.hero-gallery img:nth-child(4) {
-  margin-top: 10px;
-  border-radius: 100px 18px 18px 18px;
-}
-
-section { padding: 62px 0; }
-
-.section-heading {
-  margin-bottom: 28px;
-}
-
-.section-heading h2 {
-  font-size: clamp(30px, 4vw, 43px);
-  margin: 7px 0;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
+section { padding:55px 0; }
+.section-heading { margin-bottom:28px; }
+.section-heading h2 { font-size:clamp(30px,4vw,43px); margin:7px 0; }
+.section-heading p { color:var(--muted); font-size:14px; }
 .about-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: clamp(24px, 5vw, 45px);
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:22px; padding:clamp(24px,5vw,45px);
 }
+.about-card p { color:#626457; max-width:800px; }
+.details-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.detail-card { background:var(--paper); border:1px solid var(--line); border-radius:17px; padding:20px; }
+.detail-label { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:1.3px; }
+.detail-value { font-size:15px; font-weight:600; margin-top:6px; overflow-wrap:anywhere; }
+.education-card { background:var(--olive-light); border-radius:22px; padding:28px; }
+.education-card h3 { font-size:25px; margin:8px 0; }
+.education-card p { color:#626957; margin:6px 0; }
 
-.about-card p {
-  color: #626457;
-  max-width: 800px;
-}
-
-.details-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.detail-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 17px;
-  padding: 20px;
-}
-
-.detail-label {
-  color: var(--muted);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.3px;
-}
-
-.detail-value {
-  font-size: 15px;
-  font-weight: 600;
-  margin-top: 6px;
-  overflow-wrap: anywhere;
-}
-
-.education-card {
-  background: var(--olive-light);
-  border-radius: var(--radius);
-  padding: 28px;
-}
-
-.education-card h3 { font-size: 25px; margin: 8px 0; }
-
-.education-card p { color: #626957; margin: 6px 0; }
-
-.career-list {
-  display: grid;
-  gap: 18px;
-}
-
+.career-list { display:grid; gap:18px; }
 .career-card {
-  display: grid;
-  grid-template-columns: 70px 1fr auto;
-  align-items: center;
-  gap: 20px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 24px;
+  display:grid; grid-template-columns:145px minmax(0,1fr) auto;
+  align-items:center; gap:22px;
+  background:var(--paper); border:1px solid var(--line);
+  border-radius:22px; padding:25px;
+  transition:transform .2s,box-shadow .2s;
 }
-
-.company-mark {
-  width: 66px;
-  height: 66px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  font-size: 27px;
-  font-weight: 700;
+.career-card:hover { transform:translateY(-3px); box-shadow:0 10px 28px #292d210c; }
+.company-logo-link {
+  display:flex; align-items:center; justify-content:center;
+  width:145px; min-height:82px; padding:12px;
+  background:white; border:1px solid #efede6; border-radius:15px;
 }
-
-.accenture-mark {
-  background: #eee5f6;
-  color: #7500c0;
+.company-logo {
+  width:100%; max-width:125px; max-height:55px;
+  object-fit:contain;
 }
-
-.deloitte-mark {
-  background: #e5eddb;
-  color: #285c32;
-}
-
 .company-name {
-  display: inline-block;
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
-  font-weight: 600;
-  text-decoration: none;
+  display:inline-block; font-family:'Playfair Display',serif;
+  font-size:25px; font-weight:600; text-decoration:none;
 }
-
-.company-name:hover { color: var(--rust); }
-
-.company-role {
-  font-weight: 600;
-  font-size: 14px;
-  margin-top: 3px;
-}
-
-.company-note {
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 5px;
-}
-
+.company-name:hover { color:var(--rust); }
+.company-role { font-size:14px; font-weight:600; margin-top:3px; }
+.company-note { color:var(--muted); font-size:12px; margin-top:5px; }
 .salary {
-  text-align: right;
-  background: var(--olive-light);
-  border-radius: 14px;
-  padding: 12px 15px;
-  min-width: 110px;
+  text-align:right; background:var(--olive-light);
+  border-radius:14px; padding:12px 15px; min-width:110px;
 }
+.salary small { display:block; font-size:10px; color:var(--muted); }
+.salary strong { display:block; color:var(--olive); font-size:19px; }
 
-.salary small {
-  display: block;
-  font-size: 10px;
-  color: var(--muted);
-}
+.gallery { columns:3; column-gap:15px; }
+.gallery-item { break-inside:avoid; margin-bottom:15px; overflow:hidden; border-radius:18px; background:var(--olive-light); cursor:pointer; }
+.gallery-item img { width:100%; height:auto; min-height:160px; object-fit:cover; transition:transform .35s; }
+.gallery-item:hover img { transform:scale(1.035); }
 
-.salary strong {
-  display: block;
-  color: var(--olive);
-  font-size: 19px;
-}
-
-.gallery {
-  columns: 3;
-  column-gap: 15px;
-}
-
-.gallery-item {
-  break-inside: avoid;
-  margin-bottom: 15px;
-  overflow: hidden;
-  border-radius: 18px;
-  background: var(--olive-light);
-  cursor: pointer;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  min-height: 160px;
-  object-fit: cover;
-  transition: transform .35s ease;
-}
-
-.gallery-item:hover img { transform: scale(1.035); }
-
-.expectations {
-  background: #eae8dc;
-  border-radius: var(--radius);
-  padding: clamp(25px, 5vw, 45px);
-}
-
-.expectations p { color: #626457; }
-
-.contact-card {
-  background: var(--olive);
-  color: white;
-  padding: clamp(25px, 5vw, 45px);
-  border-radius: var(--radius);
-  text-align: center;
-}
-
-.contact-card h2 { font-size: 36px; margin: 8px 0 15px; }
-
-.contact-card p {
-  color: #e6e9de;
-  max-width: 520px;
-  margin: auto;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.contact-links a {
-  text-decoration: none;
-  border: 1px solid #cbd1bd;
-  padding: 10px 16px;
-  border-radius: 30px;
-  font-size: 13px;
-}
-
-footer {
-  text-align: center;
-  padding: 28px 0;
-  color: var(--muted);
-  font-size: 12px;
-}
-
+.expectations { background:#eae8dc; border-radius:22px; padding:clamp(25px,5vw,45px); }
+.expectations p { color:#626457; }
+.contact-card { background:var(--olive); color:white; padding:clamp(25px,5vw,45px); border-radius:22px; text-align:center; }
+.contact-card h2 { font-size:36px; margin:8px 0 15px; }
+.contact-card p { color:#e6e9de; max-width:520px; margin:auto; }
+.contact-links { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:24px; }
+.contact-links a { text-decoration:none; border:1px solid #cbd1bd; padding:10px 16px; border-radius:30px; font-size:13px; }
+footer { text-align:center; padding:28px 0; color:var(--muted); font-size:12px; }
 .lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  inset: 0;
-  background: rgba(20, 22, 17, .94);
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
+  display:none; position:fixed; z-index:1000; inset:0;
+  background:#141611f2; align-items:center; justify-content:center; padding:25px;
 }
+.lightbox.open { display:flex; }
+.lightbox img { max-width:95%; max-height:88vh; object-fit:contain; border-radius:12px; }
+.lightbox button { position:absolute; top:20px; right:25px; color:white; background:transparent; border:0; font-size:36px; cursor:pointer; }
 
-.lightbox.open { display: flex; }
-
-.lightbox img {
-  max-width: 95%;
-  max-height: 88vh;
-  object-fit: contain;
-  border-radius: 12px;
+@media(max-width:760px) {
+  .nav { align-items:flex-start; flex-direction:column; }
+  .nav-links { gap:12px; }
+  .hero { grid-template-columns:1fr; gap:30px; padding-top:40px; }
+  .hero-gallery img { height:210px; }
+  .details-grid { grid-template-columns:repeat(2,1fr); }
+  .career-card { grid-template-columns:90px minmax(0,1fr); gap:14px; padding:17px; }
+  .company-logo-link { width:90px; min-height:70px; padding:8px; }
+  .company-logo { max-width:75px; max-height:45px; }
+  .company-name { font-size:22px; }
+  .salary { grid-column:2; text-align:left; width:fit-content; }
+  .gallery { columns:2; }
 }
-
-.lightbox button {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  color: white;
-  background: transparent;
-  border: 0;
-  font-size: 36px;
-  cursor: pointer;
-}
-
-@media (max-width: 760px) {
-  .nav { align-items: flex-start; flex-direction: column; }
-  .nav-links { gap: 13px; }
-  .hero { grid-template-columns: 1fr; gap: 30px; padding-top: 40px; }
-  .hero-gallery img { height: 210px; }
-  .details-grid { grid-template-columns: repeat(2, 1fr); }
-  .career-card { grid-template-columns: 55px 1fr; gap: 14px; padding: 17px; }
-  .company-mark { width: 52px; height: 52px; font-size: 23px; }
-  .company-name { font-size: 22px; }
-  .salary { grid-column: 2; text-align: left; width: fit-content; }
-  .gallery { columns: 2; }
-}
-
-@media (max-width: 420px) {
-  .details-grid { grid-template-columns: 1fr 1fr; gap: 9px; }
-  .detail-card { padding: 14px; }
-  .detail-value { font-size: 13px; }
-  .hero-gallery img { height: 170px; }
+@media(max-width:420px) {
+  .details-grid { gap:9px; }
+  .detail-card { padding:14px; }
+  .detail-value { font-size:13px; }
+  .hero-gallery img { height:170px; }
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="container nav">
     <a class="brand" href="#home">Jinas <span style="color:#a85f43">.</span></a>
@@ -475,232 +187,166 @@ footer {
 </header>
 
 <main>
-  <section class="container hero" id="home">
-    <div>
-      <div class="eyebrow">A little introduction</div>
-      <h1>Muhammed<br><span>Jinas KJ</span></h1>
-      <p class="hero-description">
-        A simple, grounded and family-oriented person who values faith,
-        kindness, meaningful connections and growing together in life.
-      </p>
-
-      <div class="pills">
-        <span class="pill">Muslim · Sunni Mappila</span>
-        <span class="pill">Data Engineer</span>
-        <span class="pill">Bengaluru</span>
-      </div>
-
-      <div class="actions">
-        <a class="btn btn-primary" href="#details">Explore My Profile</a>
-        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
-      </div>
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow">A little introduction</div>
+    <h1>Muhammed<br><span>Jinas KJ</span></h1>
+    <p class="hero-description">
+      A simple, grounded and family-oriented person who values faith,
+      kindness, meaningful connections and growing together in life.
+    </p>
+    <div class="pills">
+      <span class="pill">Muslim · Sunni Mappila</span>
+      <span class="pill">Data Engineer</span>
+      <span class="pill">Bengaluru</span>
     </div>
-
-    <div class="hero-gallery">
-      <img src="Photo%201.jpeg" alt="Jinas photo 1" onclick="openPhoto(this)">
-      <img src="Photo%202.jpeg" alt="Jinas photo 2" onclick="openPhoto(this)">
-      <img src="Photo%203.jpeg" alt="Jinas photo 3" onclick="openPhoto(this)">
-      <img src="Photo%204.jpeg" alt="Jinas photo 4" onclick="openPhoto(this)">
+    <div class="actions">
+      <a class="btn btn-primary" href="#details">Explore My Profile</a>
+      <a class="btn btn-secondary" href="#contact">Get in Touch</a>
     </div>
-  </section>
+  </div>
+  <div class="hero-gallery">
+    <img src="Photo%201.jpeg" alt="Jinas photo 1" onclick="openPhoto(this)">
+    <img src="Photo%202.jpeg" alt="Jinas photo 2" onclick="openPhoto(this)">
+    <img src="Photo%203.jpeg" alt="Jinas photo 3" onclick="openPhoto(this)">
+    <img src="Photo%204.jpeg" alt="Jinas photo 4" onclick="openPhoto(this)">
+  </div>
+</section>
 
-  <section class="container" id="about">
-    <div class="section-heading">
-      <div class="eyebrow">Beyond the basics</div>
-      <h2>About Me</h2>
-    </div>
-    <div class="about-card">
-      <p>
-        I value family, faith, kindness, and personal growth. I enjoy travelling,
-        exploring new experiences, and making time for the people who matter.
-        I believe a good marriage is built on understanding, mutual respect,
-        honest communication, and growing together through life's different stages.
-      </p>
-      <p>
-        I believe in maintaining a balance between Deen and Dunya, making time
-        for family, enjoying life's experiences, and supporting one another's
-        ambitions and individuality.
-      </p>
-    </div>
-  </section>
+<section class="container" id="about">
+  <div class="section-heading">
+    <div class="eyebrow">Beyond the basics</div>
+    <h2>About Me</h2>
+  </div>
+  <div class="about-card">
+    <p>I value family, faith, kindness, and personal growth. I enjoy travelling, exploring new experiences, and making time for the people who matter. I believe a good marriage is built on understanding, mutual respect, honest communication, and growing together through life's different stages.</p>
+    <p>I believe in maintaining a balance between Deen and Dunya, making time for family, enjoying life's experiences, and supporting one another's ambitions and individuality.</p>
+  </div>
+</section>
 
-  <section class="container" id="details">
-    <div class="section-heading">
-      <div class="eyebrow">A few details</div>
-      <h2>Personal Profile</h2>
-    </div>
+<section class="container" id="details">
+  <div class="section-heading">
+    <div class="eyebrow">A few details</div>
+    <h2>Personal Profile</h2>
+  </div>
+  <div class="details-grid">
+    <div class="detail-card"><div class="detail-label">Full Name</div><div class="detail-value">Muhammed Jinas KJ</div></div>
+    <div class="detail-card"><div class="detail-label">Date of Birth</div><div class="detail-value">23 April 2000</div></div>
+    <div class="detail-card"><div class="detail-label">Age</div><div class="detail-value">26 years</div></div>
+    <div class="detail-card"><div class="detail-label">Height</div><div class="detail-value">170 cm</div></div>
+    <div class="detail-card"><div class="detail-label">Religion</div><div class="detail-value">Islam</div></div>
+    <div class="detail-card"><div class="detail-label">Community</div><div class="detail-value">Sunni Mappila</div></div>
+    <div class="detail-card"><div class="detail-label">Madhab</div><div class="detail-value">Shafi'i</div></div>
+    <div class="detail-card"><div class="detail-label">Native Place</div><div class="detail-value">Kalladikode, Kerala</div></div>
+    <div class="detail-card"><div class="detail-label">Place of Birth</div><div class="detail-value">Mannarkkad, Kerala</div></div>
+    <div class="detail-card"><div class="detail-label">Current Location</div><div class="detail-value">Bengaluru, Karnataka</div></div>
+    <div class="detail-card"><div class="detail-label">Blood Group</div><div class="detail-value">O Positive</div></div>
+    <div class="detail-card"><div class="detail-label">Languages</div><div class="detail-value">English, Hindi, Arabic, Tamil</div></div>
+    <div class="detail-card"><div class="detail-label">Marital Status</div><div class="detail-value">Never Married</div></div>
+    <div class="detail-card"><div class="detail-label">Profession</div><div class="detail-value">Data Engineer</div></div>
+    <div class="detail-card"><div class="detail-label">Father</div><div class="detail-value">Jaffar · Business</div></div>
+  </div>
+</section>
 
-    <div class="details-grid">
-      <div class="detail-card">
-        <div class="detail-label">Full Name</div>
-        <div class="detail-value">Muhammed Jinas KJ</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Date of Birth</div>
-        <div class="detail-value">23 April 2000</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Age</div>
-        <div class="detail-value">26 years</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Height</div>
-        <div class="detail-value">170 cm</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Religion</div>
-        <div class="detail-value">Islam</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Community</div>
-        <div class="detail-value">Sunni Mappila</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Madhab</div>
-        <div class="detail-value">Shafi'i</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Native Place</div>
-        <div class="detail-value">Kalladikode, Kerala</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Place of Birth</div>
-        <div class="detail-value">Mannarkkad, Kerala</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Current Location</div>
-        <div class="detail-value">Bengaluru, Karnataka</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Blood Group</div>
-        <div class="detail-value">O Positive</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Languages</div>
-        <div class="detail-value">English, Hindi, Arabic, Tamil</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Marital Status</div>
-        <div class="detail-value">Never Married</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Profession</div>
-        <div class="detail-value">Data Engineer</div>
-      </div>
-      <div class="detail-card">
-        <div class="detail-label">Father</div>
-        <div class="detail-value">Jaffar · Business</div>
-      </div>
-    </div>
-  </section>
+<section class="container" id="education">
+  <div class="section-heading">
+    <div class="eyebrow">Learning journey</div>
+    <h2>Education</h2>
+  </div>
+  <div class="education-card">
+    <div class="eyebrow">Bachelor's Degree · 2017–2021</div>
+    <h3>B.Tech in Computer Science and Engineering</h3>
+    <p><strong>Ammini College of Engineering, Mankara, Palakkad</strong></p>
+    <p>APJ Abdul Kalam Technological University (KTU)</p>
+    <p>Graduation Year: 2021 · CGPA: 7.89</p>
+  </div>
+</section>
 
-  <section class="container" id="education">
-    <div class="section-heading">
-      <div class="eyebrow">Learning journey</div>
-      <h2>Education</h2>
-    </div>
+<section class="container" id="career">
+  <div class="section-heading">
+    <div class="eyebrow">Professional journey</div>
+    <h2>Career &amp; Experience</h2>
+    <p>My professional journey across leading organisations.</p>
+  </div>
 
-    <div class="education-card">
-      <div class="eyebrow">Bachelor's Degree · 2017–2021</div>
-      <h3>B.Tech in Computer Science and Engineering</h3>
-      <p><strong>Ammini College of Engineering, Mankara, Palakkad</strong></p>
-      <p>APJ Abdul Kalam Technological University (KTU)</p>
-      <p>Graduation Year: 2021 · CGPA: 7.89</p>
-    </div>
-  </section>
-
-  <section class="container" id="career">
-    <div class="section-heading">
-      <div class="eyebrow">Professional journey</div>
-      <h2>Career & Experience</h2>
-      <p>My professional journey across leading organisations.</p>
-    </div>
-
-    <div class="career-list">
-      <article class="career-card">
-        <div class="company-mark accenture-mark" aria-label="Accenture">A</div>
-        <div>
-          <a class="company-name"
-             href="https://www.accenture.com/"
-             target="_blank"
-             rel="noopener noreferrer">Accenture ↗</a>
-          <div class="company-role">Software Engineer</div>
-          <div class="company-note">Previous Company · Oracle technologies</div>
-        </div>
-      </article>
-
-      <article class="career-card">
-        <div class="company-mark deloitte-mark" aria-label="Deloitte">D</div>
-        <div>
-          <a class="company-name"
-             href="https://www.deloitte.com/"
-             target="_blank"
-             rel="noopener noreferrer">Deloitte ↗</a>
-          <div class="company-role">Data Engineer</div>
-          <div class="company-note">Current Company · Bengaluru</div>
-        </div>
-        <div class="salary">
-          <small>Annual CTC</small>
-          <strong>₹20 LPA</strong>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="container" id="gallery">
-    <div class="section-heading">
-      <div class="eyebrow">Little moments</div>
-      <h2>Photo Gallery</h2>
-      <p>A few snapshots from my life.</p>
-    </div>
-
-    <div class="gallery">
-      <div class="gallery-item"><img src="Photo%201.jpeg" alt="Jinas gallery photo 1" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%202.jpeg" alt="Jinas gallery photo 2" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%203.jpeg" alt="Jinas gallery photo 3" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%204.jpeg" alt="Jinas gallery photo 4" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%205.jpeg" alt="Jinas gallery photo 5" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%206.jpeg" alt="Jinas gallery photo 6" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%207.jpeg" alt="Jinas gallery photo 7" loading="lazy" onclick="openPhoto(this)"></div>
-      <div class="gallery-item"><img src="Photo%208.jpeg" alt="Jinas gallery photo 8" loading="lazy" onclick="openPhoto(this)"></div>
-    </div>
-  </section>
-
-  <section class="container" id="expectations">
-    <div class="expectations">
-      <div class="eyebrow">Looking ahead</div>
-      <h2>Partner Expectations</h2>
-      <p>
-        I hope to find a kind-hearted, caring, and God-conscious partner with
-        whom I can build a peaceful and supportive life. I value mutual respect,
-        trust, open communication, and a balance between Deen and Dunya.
-        I would love for us to encourage each other's ambitions, respect each
-        other's individuality, and share life's joys and responsibilities as a team.
-      </p>
-    </div>
-  </section>
-
-  <section class="container" id="contact">
-    <div class="contact-card">
-      <div class="eyebrow" style="color:#e7d5bd">Let's connect</div>
-      <h2>Get in Touch</h2>
-      <p>
-        For further details or to get in touch, please use any of the links below.
-      </p>
-      <div class="contact-links">
-        <a href="tel:+918606095470">☎ Phone</a>
-        <a href="https://wa.me/918606095470" target="_blank" rel="noopener noreferrer">◉ WhatsApp</a>
-        <a href="https://www.instagram.com/jinas__m__marhaba/" target="_blank" rel="noopener noreferrer">◎ Instagram</a>
-        <a href="https://www.linkedin.com/in/muhammedjinas-kj/" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
+  <div class="career-list">
+    <article class="career-card">
+      <a class="company-logo-link" href="https://www.accenture.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Accenture official website">
+        <img class="company-logo"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Accenture_logo.svg"
+          alt="Accenture logo"
+          loading="lazy">
+      </a>
+      <div>
+        <a class="company-name" href="https://www.accenture.com/" target="_blank" rel="noopener noreferrer">Accenture ↗</a>
+        <div class="company-role">Software Engineer</div>
+        <div class="company-note">Previous Company · Oracle technologies</div>
       </div>
+    </article>
+
+    <article class="career-card">
+      <a class="company-logo-link" href="https://www.deloitte.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deloitte official website">
+        <img class="company-logo"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Logo_of_Deloitte.svg"
+          alt="Deloitte logo"
+          loading="lazy">
+      </a>
+      <div>
+        <a class="company-name" href="https://www.deloitte.com/" target="_blank" rel="noopener noreferrer">Deloitte ↗</a>
+        <div class="company-role">Data Engineer</div>
+        <div class="company-note">Current Company · Bengaluru</div>
+      </div>
+      <div class="salary">
+        <small>Annual CTC</small>
+        <strong>₹20 LPA</strong>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="container" id="gallery">
+  <div class="section-heading">
+    <div class="eyebrow">Little moments</div>
+    <h2>Photo Gallery</h2>
+    <p>A few snapshots from my life.</p>
+  </div>
+  <div class="gallery">
+    <div class="gallery-item"><img src="Photo%201.jpeg" alt="Jinas gallery photo 1" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%202.jpeg" alt="Jinas gallery photo 2" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%203.jpeg" alt="Jinas gallery photo 3" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%204.jpeg" alt="Jinas gallery photo 4" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%205.jpeg" alt="Jinas gallery photo 5" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%206.jpeg" alt="Jinas gallery photo 6" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%207.jpeg" alt="Jinas gallery photo 7" loading="lazy" onclick="openPhoto(this)"></div>
+    <div class="gallery-item"><img src="Photo%208.jpeg" alt="Jinas gallery photo 8" loading="lazy" onclick="openPhoto(this)"></div>
+  </div>
+</section>
+
+<section class="container" id="expectations">
+  <div class="expectations">
+    <div class="eyebrow">Looking ahead</div>
+    <h2>Partner Expectations</h2>
+    <p>I hope to find a kind-hearted, caring, and God-conscious partner with whom I can build a peaceful and supportive life. I value mutual respect, trust, open communication, and a balance between Deen and Dunya. I would love for us to encourage each other's ambitions, respect each other's individuality, and share life's joys and responsibilities as a team.</p>
+  </div>
+</section>
+
+<section class="container" id="contact">
+  <div class="contact-card">
+    <div class="eyebrow" style="color:#e7d5bd">Let's connect</div>
+    <h2>Get in Touch</h2>
+    <p>For further details or to get in touch, please use any of the links below.</p>
+    <div class="contact-links">
+      <a href="tel:+918606095470">☎ Phone</a>
+      <a href="https://wa.me/918606095470" target="_blank" rel="noopener noreferrer">◉ WhatsApp</a>
+      <a href="https://www.instagram.com/jinas__m__marhaba/" target="_blank" rel="noopener noreferrer">◎ Instagram</a>
+      <a href="https://www.linkedin.com/in/muhammedjinas-kj/" target="_blank" rel="noopener noreferrer">in LinkedIn</a>
     </div>
-  </section>
+  </div>
+</section>
 </main>
 
 <footer>
-  <div class="container">
-    Muhammed Jinas KJ · Personal Marriage Profile
-  </div>
+  <div class="container">Muhammed Jinas KJ · Personal Marriage Profile</div>
 </footer>
 
 <div class="lightbox" id="lightbox" onclick="closePhoto()">
@@ -710,21 +356,18 @@ footer {
 
 <script>
 function openPhoto(image) {
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImage = document.getElementById('lightbox-image');
-  lightboxImage.src = image.src;
-  lightboxImage.alt = image.alt;
-  lightbox.classList.add('open');
+  const box = document.getElementById('lightbox');
+  const photo = document.getElementById('lightbox-image');
+  photo.src = image.src;
+  photo.alt = image.alt;
+  box.classList.add('open');
 }
-
 function closePhoto() {
   document.getElementById('lightbox').classList.remove('open');
 }
-
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') closePhoto();
 });
 </script>
-
 </body>
 </html>
