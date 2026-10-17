@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +10,107 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-photo {
+      overflow: hidden;
+      border-radius: 24px;
+      background: #e8e8e2;
+    }
+    .hero-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .gallery-slot {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #e8e8e2;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+    }
+    .gallery-slot img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .gallery-slot:hover img {
+      transform: scale(1.06);
+    }
+    .gallery-slot span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 10px 10px;
+      color: white;
+      background: linear-gradient(transparent, rgba(0,0,0,.65));
+      font-size: 12px;
+    }
+    .gallery-viewer {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(8, 16, 13, .94);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gallery-viewer.open { display: flex; }
+    .gallery-viewer img {
+      max-width: min(90vw, 650px);
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+    .viewer-close, .viewer-prev, .viewer-next {
+      position: absolute;
+      border: 0;
+      color: white;
+      background: rgba(255,255,255,.15);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .viewer-close { top: 18px; right: 18px; }
+    .viewer-prev { left: 14px; }
+    .viewer-next { right: 14px; }
+    .viewer-count {
+      position: absolute;
+      bottom: 18px;
+      color: white;
+      font: 14px "DM Sans", sans-serif;
+    }
+    @media (max-width: 650px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .hero-photo img { min-height: 240px; }
+    }
+  </style>
 </head>
 <body>
-  <div class="topbar"><span>Digital Marriage Profile</span><span>Jinas</span></div>
+  <div class="topbar">
+    <span>Digital Marriage Profile</span>
+    <span>Jinas</span>
+  </div>
 
   <header class="hero" id="home">
     <div class="hero-photo">
-      <img id="heroImage" src="photos/photo1.jpg" alt="Muhammad Jinas KJ" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-      <div class="photo-placeholder">YOUR<br>PHOTO</div>
+      <img id="heroImage" src="Photo%201.jpeg" alt="Muhammad Jinas KJ"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+      <div class="photo-placeholder" style="display:none">YOUR<br>PHOTO</div>
     </div>
     <div class="hero-copy">
       <p class="eyebrow">Assalamu Alaikum</p>
@@ -106,14 +200,21 @@
       </div>
     </section>
 
-    <section class="section gallery">
+    <section class="section gallery" id="gallery">
       <div class="section-label">05 / Photo Gallery</div>
-      <div class="gallery-head"><h2>Moments &amp; memories.</h2><p>A few moments from my journey. More photos can be added anytime.</p></div>
-      <div class="gallery-grid">
-        <div class="gallery-slot"><img src="photos/photo1.jpg" alt="" onerror="this.style.display='none'"><span>Photo 01</span></div>
-        <div class="gallery-slot"><img src="photos/photo2.jpg" alt="" onerror="this.style.display='none'"><span>Photo 02</span></div>
-        
-        
+      <div class="gallery-head">
+        <h2>Moments &amp; memories.</h2>
+        <p>A few moments from my journey. Tap any photo to view the gallery.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-slot" data-photo="0"><img src="Photo%201.jpeg" alt="Jinas photo 1" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 01</span></div>
+        <div class="gallery-slot" data-photo="1"><img src="Photo%202.jpeg" alt="Jinas photo 2" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 02</span></div>
+        <div class="gallery-slot" data-photo="2"><img src="Photo%203.jpeg" alt="Jinas photo 3" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 03</span></div>
+        <div class="gallery-slot" data-photo="3"><img src="Photo%204.jpeg" alt="Jinas photo 4" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 04</span></div>
+        <div class="gallery-slot" data-photo="4"><img src="Photo%205.jpeg" alt="Jinas photo 5" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 05</span></div>
+        <div class="gallery-slot" data-photo="5"><img src="Photo%206.jpeg" alt="Jinas photo 6" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 06</span></div>
+        <div class="gallery-slot" data-photo="6"><img src="Photo%207.jpeg" alt="Jinas photo 7" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 07</span></div>
+        <div class="gallery-slot" data-photo="7"><img src="Photo%208.jpeg" alt="Jinas photo 8" loading="lazy" onerror="this.parentElement.style.display='none'"><span>Photo 08</span></div>
       </div>
     </section>
 
@@ -135,6 +236,70 @@
   </main>
 
   <footer>© <span id="year"></span> Muhammad Jinas KJ · Digital Marriage Profile</footer>
+
+  <div class="gallery-viewer" id="galleryViewer" aria-label="Photo viewer" aria-modal="true" role="dialog">
+    <button class="viewer-close" id="viewerClose" aria-label="Close gallery">×</button>
+    <button class="viewer-prev" id="viewerPrev" aria-label="Previous photo">‹</button>
+    <img id="viewerImage" src="Photo%201.jpeg" alt="Gallery photo">
+    <button class="viewer-next" id="viewerNext" aria-label="Next photo">›</button>
+    <div class="viewer-count" id="viewerCount">1 / 8</div>
+  </div>
+
   <script src="data.js"></script>
+  <script>
+    (function () {
+      const photos = [
+        "Photo%201.jpeg", "Photo%202.jpeg", "Photo%203.jpeg", "Photo%204.jpeg",
+        "Photo%205.jpeg", "Photo%206.jpeg", "Photo%207.jpeg", "Photo%208.jpeg"
+      ];
+      const viewer = document.getElementById("galleryViewer");
+      const viewerImage = document.getElementById("viewerImage");
+      const viewerCount = document.getElementById("viewerCount");
+      let current = 0;
+
+      function showPhoto(index) {
+        current = (index + photos.length) % photos.length;
+        viewerImage.src = photos[current];
+        viewerCount.textContent = (current + 1) + " / " + photos.length;
+        viewer.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeViewer() {
+        viewer.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".gallery-slot").forEach(function (slot) {
+        slot.addEventListener("click", function () {
+          showPhoto(Number(slot.dataset.photo));
+        });
+      });
+      document.getElementById("viewerClose").addEventListener("click", closeViewer);
+      document.getElementById("viewerPrev").addEventListener("click", function () {
+        showPhoto(current - 1);
+      });
+      document.getElementById("viewerNext").addEventListener("click", function () {
+        showPhoto(current + 1);
+      });
+      viewer.addEventListener("click", function (event) {
+        if (event.target === viewer) closeViewer();
+      });
+      document.addEventListener("keydown", function (event) {
+        if (!viewer.classList.contains("open")) return;
+        if (event.key === "Escape") closeViewer();
+        if (event.key === "ArrowLeft") showPhoto(current - 1);
+        if (event.key === "ArrowRight") showPhoto(current + 1);
+      });
+
+      let touchStartX = 0;
+      viewer.addEventListener("touchstart", function (event) {
+        touchStartX = event.changedTouches[0].screenX;
+      }, { passive: true });
+      viewer.addEventListener("touchend", function (event) {
+        const diff = event.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(diff) > 50) showPhoto(current + (diff < 0 ? 1 : -1));
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
