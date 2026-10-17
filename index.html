@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -328,6 +328,7 @@
       border: 1px solid rgba(230, 225, 214, 0.9);
       border-radius: 18px;
       transition: transform 0.2s, box-shadow 0.2s;
+      min-width: 0;
     }
 
     .career-card:hover {
@@ -335,22 +336,66 @@
       box-shadow: var(--shadow);
     }
 
+    /* Company logo boxes */
     .company-logo {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 86px;
       height: 76px;
-      padding: 10px;
+      padding: 9px;
+      flex-shrink: 0;
+      overflow: hidden;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 14px;
     }
 
     .company-logo img {
+      display: block;
+      width: 100%;
       max-width: 100%;
       max-height: 55px;
       object-fit: contain;
+    }
+
+    /* Clear, responsive wordmarks that don't depend on external images */
+    .company-wordmark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      white-space: nowrap;
+      line-height: 1;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+    }
+
+    .deloitte-wordmark {
+      color: #222222;
+      font-size: 17px;
+      letter-spacing: -0.8px;
+    }
+
+    .deloitte-dot {
+      color: #86bc25;
+      font-size: 25px;
+      line-height: 0.7;
+      margin-left: 1px;
+    }
+
+    .accenture-wordmark {
+      color: #5b2c91;
+      font-size: 15px;
+      letter-spacing: -0.8px;
+    }
+
+    .accenture-symbol {
+      color: #a100ff;
+      font-size: 21px;
+      font-weight: 700;
+      margin-right: 1px;
+      transform: translateY(-3px);
     }
 
     .career-type {
@@ -369,6 +414,7 @@
       font-size: 25px;
       line-height: 1.25;
       font-weight: 600;
+      overflow-wrap: anywhere;
     }
 
     .career-role {
@@ -682,11 +728,26 @@
       .company-logo {
         width: 62px;
         height: 62px;
-        padding: 7px;
+        padding: 5px;
+        border-radius: 12px;
       }
 
-      .company-logo img {
-        max-height: 45px;
+      .deloitte-wordmark {
+        font-size: 13px;
+        letter-spacing: -0.6px;
+      }
+
+      .deloitte-dot {
+        font-size: 19px;
+      }
+
+      .accenture-wordmark {
+        font-size: 11px;
+        letter-spacing: -0.5px;
+      }
+
+      .accenture-symbol {
+        font-size: 16px;
       }
 
       .career-title {
@@ -697,6 +758,8 @@
         grid-column: 2;
         justify-self: start;
         margin-top: -3px;
+        white-space: normal;
+        max-width: 100%;
       }
 
       .story-grid,
@@ -724,479 +787,4 @@
 
       .contact-panel {
         grid-template-columns: 1fr;
-        padding: 28px 23px;
-      }
-
-      .contact-links {
-        justify-content: flex-start;
-      }
-
-      .lightbox-prev {
-        left: 8px;
-      }
-
-      .lightbox-next {
-        right: 8px;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .profile-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .career-card {
-        grid-template-columns: 52px minmax(0, 1fr);
-        gap: 10px;
-        padding: 12px;
-      }
-
-      .company-logo {
-        width: 52px;
-        height: 52px;
-      }
-
-      .career-title {
-        font-size: 19px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="brand" href="#home">Jinas<span>.</span></a>
-      <a class="top-link" href="#contact">Get in touch ↗</a>
-    </header>
-
-    <main>
-      <section class="hero" id="home">
-        <div>
-          <span class="eyebrow">A little introduction</span>
-          <h1>Muhammed<br>Jinas <span>KJ.</span></h1>
-          <p class="hero-description">
-            A simple introduction to my life, values, family, education and career —
-            with the hope of finding a meaningful partnership built on faith,
-            understanding and mutual respect.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="#about">Get to know me ↗</a>
-            <a class="button secondary" href="#contact">Contact me</a>
-          </div>
-        </div>
-
-        <div class="hero-collage" aria-label="Photo collage">
-          <div class="hero-photo" data-image="Photo 1.jpeg">
-            <img src="Photo%201.jpeg" alt="Jinas portrait 1" fetchpriority="high">
-          </div>
-          <div class="hero-photo" data-image="Photo 2.jpeg">
-            <img src="Photo%202.jpeg" alt="Jinas portrait 2">
-          </div>
-          <div class="hero-photo" data-image="Photo 3.jpeg">
-            <img src="Photo%203.jpeg" alt="Jinas portrait 3">
-          </div>
-          <div class="hero-photo" data-image="Photo 4.jpeg">
-            <img src="Photo%204.jpeg" alt="Jinas portrait 4">
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="profile">
-        <div class="section-heading">
-          <div>
-            <span class="section-number">01 / THE BASICS</span>
-            <h2>A few details</h2>
-          </div>
-          <p class="section-note">The little things that make up my story.</p>
-        </div>
-
-        <div class="profile-grid">
-          <article class="info-card">
-            <span class="info-label">Full name</span>
-            <span class="info-value">Muhammed Jinas KJ</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Date of birth</span>
-            <span class="info-value">23 April 2000</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Height</span>
-            <span class="info-value">170 cm</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Religion</span>
-            <span class="info-value">Islam</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Community</span>
-            <span class="info-value">Sunni Mappila</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Madhab</span>
-            <span class="info-value">Shafi'i</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Profession</span>
-            <span class="info-value">Data Engineer</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Current location</span>
-            <span class="info-value">Bengaluru, Karnataka</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Native place</span>
-            <span class="info-value">Kalladikode, Palakkad</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Place of birth</span>
-            <span class="info-value">Mannarkkad, Kerala</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Marital status</span>
-            <span class="info-value">Never married</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Blood group</span>
-            <span class="info-value">O Positive</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Languages</span>
-            <span class="info-value">English, Hindi, Arabic, Tamil</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Father's name</span>
-            <span class="info-value">Jaffar</span>
-          </article>
-
-          <article class="info-card">
-            <span class="info-label">Family occupation</span>
-            <span class="info-value">Business</span>
-          </article>
-        </div>
-      </section>
-
-      <!-- CAREER JOURNEY: DELOITTE + ACCENTURE -->
-      <section class="section" id="career">
-        <div class="career-section">
-          <div class="section-heading">
-            <div>
-              <span class="section-number">02 / CAREER JOURNEY</span>
-              <h2>My professional life</h2>
-            </div>
-            <p class="section-note">Learning, growing and building my career.</p>
-          </div>
-
-          <div class="career-list">
-            <!-- CURRENT COMPANY -->
-            <article class="career-card">
-              <a
-                class="company-logo"
-                href="https://www.deloitte.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Deloitte official website"
-              >
-                <img
-                  src="https://logo.clearbit.com/deloitte.com"
-                  alt="Deloitte logo"
-                  loading="lazy"
-                  onerror="this.style.display='none';this.parentElement.innerHTML='<strong style=&quot;color:#86bc25;font-size:18px&quot;>Deloitte</strong>';"
-                >
-              </a>
-
-              <div>
-                <span class="career-type">Current company</span>
-                <h3 class="career-title">
-                  <a href="https://www.deloitte.com/" target="_blank" rel="noopener noreferrer">
-                    Deloitte USI ↗
-                  </a>
-                </h3>
-                <p class="career-role">Data Engineer</p>
-                <p class="career-meta">Bengaluru, India</p>
-                <a class="career-link" href="https://www.deloitte.com/" target="_blank" rel="noopener noreferrer">
-                  Visit company website ↗
-                </a>
-              </div>
-
-              <span class="career-badge">₹20 LPA</span>
-            </article>
-
-            <!-- PREVIOUS COMPANY -->
-            <article class="career-card">
-              <a
-                class="company-logo"
-                href="https://www.accenture.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Accenture official website"
-              >
-                <img
-                  src="https://logo.clearbit.com/accenture.com"
-                  alt="Accenture logo"
-                  loading="lazy"
-                  onerror="this.style.display='none';this.parentElement.innerHTML='<strong style=&quot;color:#a100ff;font-size:15px&quot;>accenture</strong>';"
-                >
-              </a>
-
-              <div>
-                <span class="career-type">Previous company</span>
-                <h3 class="career-title">
-                  <a href="https://www.accenture.com/" target="_blank" rel="noopener noreferrer">
-                    Accenture ↗
-                  </a>
-                </h3>
-                <p class="career-role">Software Engineer</p>
-                <p class="career-meta">Professional experience starting in 2022</p>
-                <a class="career-link" href="https://www.accenture.com/" target="_blank" rel="noopener noreferrer">
-                  Visit company website ↗
-                </a>
-              </div>
-
-              <span class="career-badge">Previous role</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="section-heading">
-          <div>
-            <span class="section-number">03 / EDUCATION</span>
-            <h2>My learning journey</h2>
-          </div>
-        </div>
-
-        <div class="education-card">
-          <article class="education-item">
-            <span class="info-label">Degree</span>
-            <h3>B.Tech in Computer Science</h3>
-            <p>Ammini College of Engineering, Mankara, Palakkad</p>
-            <p>APJ Abdul Kalam Technological University</p>
-          </article>
-
-          <article class="education-item">
-            <span class="info-label">Academic details</span>
-            <h3>Graduated in 2021</h3>
-            <p>CGPA: 7.89</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="section-heading">
-          <div>
-            <span class="section-number">04 / BEYOND THE PROFILE</span>
-            <h2>What matters to me</h2>
-          </div>
-        </div>
-
-        <div class="story-grid">
-          <article class="story-card">
-            <div class="story-mark">“</div>
-            <h3>About me</h3>
-            <p>
-              I value family, faith, kindness, and personal growth. I enjoy
-              travelling, exploring new experiences, and making time for the
-              people who matter. I believe a good marriage is built on
-              understanding, mutual respect, honest communication, and growing
-              together through life's different stages.
-            </p>
-          </article>
-
-          <article class="story-card" id="expectations">
-            <div class="story-mark">“</div>
-            <h3>Partner expectations</h3>
-            <p>
-              I hope to find a kind-hearted, caring, and God-conscious partner
-              with whom I can build a peaceful and supportive life. I value
-              mutual respect, trust, open communication, and a balance between
-              Deen and Dunya. I would love for us to encourage each other's
-              ambitions, respect each other's individuality, and share life's
-              joys and responsibilities as a team.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="gallery">
-        <div class="section-heading">
-          <div>
-            <span class="section-number">05 / PHOTO STORIES</span>
-            <h2>A little gallery</h2>
-          </div>
-          <p class="section-note">Tap a photo to view it.</p>
-        </div>
-
-        <div class="gallery">
-          <div class="gallery-item" data-image="Photo 1.jpeg">
-            <img src="Photo%201.jpeg" alt="Jinas photo 1" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 2.jpeg">
-            <img src="Photo%202.jpeg" alt="Jinas photo 2" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 3.jpeg">
-            <img src="Photo%203.jpeg" alt="Jinas photo 3" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 4.jpeg">
-            <img src="Photo%204.jpeg" alt="Jinas photo 4" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 5.jpeg">
-            <img src="Photo%205.jpeg" alt="Jinas photo 5" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 6.jpeg">
-            <img src="Photo%206.jpeg" alt="Jinas photo 6" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 7.jpeg">
-            <img src="Photo%207.jpeg" alt="Jinas photo 7" loading="lazy">
-          </div>
-          <div class="gallery-item" data-image="Photo 8.jpeg">
-            <img src="Photo%208.jpeg" alt="Jinas photo 8" loading="lazy">
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <div class="contact-panel">
-          <div>
-            <span class="eyebrow" style="color:#d8dfcc">Let's connect</span>
-            <h2>Start a conversation.</h2>
-            <p>
-              For further details, family conversations or a meaningful
-              introduction, feel free to reach out.
-            </p>
-          </div>
-
-          <div class="contact-links">
-            <a class="contact-icon" href="tel:+918606095470" aria-label="Call Jinas" title="Phone">☎</a>
-            <a class="contact-icon" href="https://wa.me/918606095470" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">WA</a>
-            <a class="contact-icon" href="https://www.instagram.com/jinas__m__marhaba/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">IG</a>
-            <a class="contact-icon" href="https://www.linkedin.com/in/muhammedjinas-kj/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">in</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>Made with care · Muhammed Jinas KJ</p>
-    </footer>
-  </div>
-
-  <div class="lightbox" id="lightbox" aria-label="Photo viewer" aria-modal="true" role="dialog">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo viewer">×</button>
-    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
-    <img id="lightboxImage" src="" alt="Selected photo">
-    <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
-  </div>
-
-  <script>
-    (function () {
-      const photos = [
-        "Photo 1.jpeg",
-        "Photo 2.jpeg",
-        "Photo 3.jpeg",
-        "Photo 4.jpeg",
-        "Photo 5.jpeg",
-        "Photo 6.jpeg",
-        "Photo 7.jpeg",
-        "Photo 8.jpeg"
-      ];
-
-      const lightbox = document.getElementById("lightbox");
-      const lightboxImage = document.getElementById("lightboxImage");
-      const closeButton = document.getElementById("lightboxClose");
-      const prevButton = document.getElementById("lightboxPrev");
-      const nextButton = document.getElementById("lightboxNext");
-
-      let currentIndex = 0;
-      let touchStartX = 0;
-
-      function openLightbox(photoName) {
-        currentIndex = photos.indexOf(photoName);
-
-        if (currentIndex < 0) {
-          currentIndex = 0;
-        }
-
-        showPhoto();
-        lightbox.classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
-
-      function showPhoto() {
-        lightboxImage.src = encodeURI(photos[currentIndex]);
-        lightboxImage.alt = "Jinas photo " + (currentIndex + 1);
-      }
-
-      function closeLightbox() {
-        lightbox.classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      function nextPhoto() {
-        currentIndex = (currentIndex + 1) % photos.length;
-        showPhoto();
-      }
-
-      function previousPhoto() {
-        currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-        showPhoto();
-      }
-
-      document.querySelectorAll("[data-image]").forEach(function (item) {
-        item.addEventListener("click", function () {
-          openLightbox(item.getAttribute("data-image"));
-        });
-      });
-
-      closeButton.addEventListener("click", closeLightbox);
-      nextButton.addEventListener("click", nextPhoto);
-      prevButton.addEventListener("click", previousPhoto);
-
-      lightbox.addEventListener("click", function (event) {
-        if (event.target === lightbox) {
-          closeLightbox();
-        }
-      });
-
-      document.addEventListener("keydown", function (event) {
-        if (!lightbox.classList.contains("open")) return;
-
-        if (event.key === "Escape") closeLightbox();
-        if (event.key === "ArrowRight") nextPhoto();
-        if (event.key === "ArrowLeft") previousPhoto();
-      });
-
-      lightbox.addEventListener("touchstart", function (event) {
-        touchStartX = event.changedTouches[0].screenX;
-      }, { passive: true });
-
-      lightbox.addEventListener("touchend", function (event) {
-        const touchEndX = event.changedTouches[0].screenX;
-        const difference = touchEndX - touchStartX;
-
-        if (Math.abs(difference) > 50) {
-          if (difference < 0) {
-            nextPhoto();
-          } else {
-            previousPhoto();
-          }
-        }
-      }, { passive: true });
-    })();
-  </script>
-</body>
-</html>
+        padding: 28px 23px
